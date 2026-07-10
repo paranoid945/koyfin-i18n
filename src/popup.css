@@ -23,6 +23,11 @@ h1 {
   margin: 0;
 }
 
+/* Author styles on .row would otherwise override the UA's display:none */
+[hidden] {
+  display: none !important;
+}
+
 .row {
   display: flex;
   align-items: center;
@@ -53,8 +58,19 @@ hr {
 }
 
 input[type="password"] {
-  width: 130px;
+  width: 100px;
   padding: 3px 4px;
+}
+
+button#save-key,
+button#download-pack {
+  padding: 3px 10px;
+  cursor: pointer;
+}
+
+.note a {
+  color: #2dd4bf;
+  text-decoration: none;
 }
 
 .status {

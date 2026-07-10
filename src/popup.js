@@ -30,6 +30,9 @@ const dynamicOptions = document.getElementById("dynamic-options");
 const engineSelect = document.getElementById("engine");
 const keyRow = document.getElementById("key-row");
 const keyInput = document.getElementById("apikey");
+const keyHelp = document.getElementById("key-help");
+const keyStatus = document.getElementById("key-status");
+const saveKeyBtn = document.getElementById("save-key");
 const engineNote = document.getElementById("engine-note");
 const statusRow = document.getElementById("builtin-status-row");
 const statusEl = document.getElementById("builtin-status");
@@ -136,12 +139,43 @@ downloadBtn.addEventListener("click", async () => {
   }
 });
 
+function setKeyStatus(text, kind) {
+  keyStatus.hidden = !text;
+  keyStatus.textContent = text;
+  keyStatus.className = `note status${kind ? ` status--${kind}` : ""}`;
+}
+
 function refreshDynamicUi() {
+  const isGoogle = engineSelect.value === "google";
   dynamicOptions.hidden = !dynamicInput.checked;
-  keyRow.hidden = engineSelect.value !== "google";
+  keyRow.hidden = !isGoogle;
+  keyHelp.hidden = !isGoogle;
+  if (!isGoogle) setKeyStatus("", "");
   engineNote.textContent = NOTES[engineSelect.value] ?? "";
   refreshBuiltinStatus();
 }
+
+saveKeyBtn.addEventListener("click", async () => {
+  const key = keyInput.value.trim();
+  await chrome.storage.local.set({ googleApiKey: key });
+  if (!key) {
+    setKeyStatus("Key cleared.", "");
+    return;
+  }
+  // Verify the key end-to-end with a one-word translation.
+  setKeyStatus("Verifying key…", "");
+  chrome.runtime.sendMessage(
+    { type: "translateBatch", texts: ["hello"], target: "zh-CN" },
+    (resp) => {
+      if (chrome.runtime.lastError || !resp || resp.error) {
+        const reason = resp?.error ?? chrome.runtime.lastError?.message ?? "no response";
+        setKeyStatus(`Saved, but the key failed verification (${reason}).`, "err");
+      } else {
+        setKeyStatus("Key verified and saved ✓", "ok");
+      }
+    }
+  );
+});
 
 chrome.storage.sync.get(DEFAULTS, (items) => {
   enabledInput.checked = items.enabled;
@@ -174,6 +208,3 @@ engineSelect.addEventListener("change", () => {
   refreshDynamicUi();
 });
 
-keyInput.addEventListener("change", () => {
-  chrome.storage.local.set({ googleApiKey: keyInput.value.trim() });
-});

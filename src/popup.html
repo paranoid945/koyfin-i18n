@@ -48,7 +48,15 @@
       <label class="row" id="key-row" hidden>
         <span>API key</span>
         <input type="password" id="apikey" placeholder="Google API key" autocomplete="off" />
+        <button id="save-key">Save</button>
       </label>
+      <p class="note status" id="key-status" hidden></p>
+      <p class="note" id="key-help" hidden>
+        Get a free key in the
+        <a href="https://console.cloud.google.com/apis/credentials" target="_blank" rel="noreferrer">Google Cloud Console</a>:
+        create a project, enable the <em>Cloud Translation API</em>, then
+        Credentials → Create API key. Free tier: 500,000 characters/month.
+      </p>
 
       <p class="note" id="engine-note"></p>
 
