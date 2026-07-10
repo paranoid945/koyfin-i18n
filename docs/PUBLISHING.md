@@ -29,9 +29,13 @@ In the dashboard, click **New item** and upload the zip. Then fill in:
 - **Name:** Koyfin UI Translator
 - **Summary:** Translate Koyfin's interface into Chinese, Japanese,
   Korean, German, French or Spanish — fully offline.
-- **Description:** explain what is translated (static UI labels) and what
-  is not (dynamic content), list the supported languages, and note that no
-  data leaves the browser. Linking to the GitHub repository is recommended.
+- **Description:** explain what is translated (static UI labels, plus
+  opt-in machine translation of dynamic content), list the supported
+  languages, and note that static translation never leaves the browser.
+  Linking to the GitHub repository is recommended. Include the disclaimer
+  from the README: translations may be inaccurate — always refer to the
+  original English before making investment decisions; no liability for
+  losses.
 - **Category:** Tools (or Productivity).
 - **Icon:** upload `icons/icon128.png`.
 - **Screenshots:** at least one 1280×800 (or 640×400) screenshot. Take

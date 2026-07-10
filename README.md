@@ -170,6 +170,15 @@ walkthrough.
 This is an unofficial, open-source project and is not affiliated with or
 endorsed by Koyfin.
 
+**No warranty — use at your own risk.** Translations (both the built-in
+dictionary and machine translation of dynamic content) may be inaccurate,
+incomplete, or outdated, and financial terminology is especially easy to
+get wrong. Always refer to the original English text on Koyfin before
+making any investment decision. The authors and contributors accept no
+liability for any loss — financial or otherwise — arising from the use of
+this extension or from reliance on its translations, as also stated in the
+[MIT License](LICENSE).
+
 ## License
 
 [MIT](LICENSE)
