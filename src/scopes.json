@@ -1,5 +1,9 @@
 {
-  "comment": "Translation scope whitelist. See docs/SCOPES.md for what each selector covers, the decision log, and how to maintain this file.",
+  "comment": "Translation scope whitelist. 'whitelist' = dictionary-translated UI; 'exclude' = never touched, even inside a scope; 'dynamic' = machine-translated content regions (news, descriptions), only when the user enables dynamic translation. See docs/SCOPES.md for the decision log.",
+  "dynamic": [
+    "[class*='koy-news-item']",
+    "[class*='cell-content-text-block']"
+  ],
   "whitelist": [
     "nav[class*='navi-panel-layout'] a[class*='navi-panel-list-item']",
     "nav[class*='navi-panel-layout'] button[class*='navi-panel-section']",
@@ -10,6 +14,9 @@
     "[class*='top-header__topHeader__root']",
     "[class*='console__label']",
     "[class*='koy-tab-item__koyTabItem__label']",
+    "[class*='koy-panel__stdHeaderLabel']",
+    "[class*='koy-section-header']",
+    "[class*='home-flex-header']",
     "label[class*='text-label']",
     "[class*='chart-toolbar-styles__toolbar']",
     "[class*='chart-sidebar-styles__tabs']",

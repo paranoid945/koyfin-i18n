@@ -32,7 +32,10 @@ stable hooks available.
 | `button[class*='base-button']`, `button[class*='primary-button']` | All standard buttons (incl. `aria-label`/`title`) | Columns, Sort, Download, Add Metric |
 | `[class*='top-header__topHeader__root']` | Top header bar | Upgrade, Help Center |
 | `[class*='console__label']` | Search console placeholder label | Search for a name, ticker, or function |
-| `[class*='koy-tab-item__koyTabItem__label']` | Page tabs | Stock Screener, ETFs and MFs |
+| `[class*='koy-tab-item__koyTabItem__label']` | Page tabs | Stock Screener, ETFs and MFs, Top News |
+| `[class*='koy-panel__stdHeaderLabel']` | Dashboard/snapshot panel headers | U.S. Equity Markets, Key Data, Capital Structure |
+| `[class*='koy-section-header']` | News section headers | Trending News, Latest News |
+| `[class*='home-flex-header']` | Home dashboard subsection headers | Commodities, American Markets |
 | `label[class*='text-label']` | Generic UI labels, incl. feature blurbs | My Screens, Universe Criteria: |
 | `[class*='chart-toolbar-styles__toolbar']` | Chart toolbar | Show Table, Export, Settings, Daily |
 | `[class*='chart-sidebar-styles__tabs']`, `h2[class*='chart-sidebar-styles__headerTitle']`, `[class*='chart-sidebar-styles__securityBtn']` | Chart sidebar chrome | Selections, Templates, Add Ticker |
@@ -50,6 +53,26 @@ stable hooks available.
 | `[class*='navi-panel-ticker-info']` | Ticker widget in sidebar | AAPL / Apple Inc. are data |
 | `[class*='quote-box-security-dropdown']` | Company name inside the quote-box button | Only place a company name sits inside a whitelisted button |
 | `[class*='time-frame-options']`, `[class*='time-range']` | Chart timeframe codes and date range | `1m`/`ytd` are financial conventions; dates are data |
+
+## Dynamic scopes (machine translation)
+
+The `dynamic` list in `src/scopes.json` marks content regions — news
+headlines, company descriptions — that are machine-translated when the
+user enables "Translate dynamic content" (Chrome built-in Translator by
+default, or the user's own Google Cloud Translation key). Within these
+scopes the dictionary still wins for exact matches; strings without
+letters (tickers, numbers) are skipped; results are cached per language.
+
+Current dynamic scopes (from recon of the Market News page and the stock
+snapshot description page, 2026-07-11):
+
+| Selector | Content | Sample |
+| --- | --- | --- |
+| `[class*='koy-news-item']` | News headlines (news page, panels) | "Google, Amazon Increase Data-Center Capacity Plans" |
+| `[class*='cell-content-text-block']` | Company description text blocks | "Meta Platforms, Inc. engages in the development…" |
+
+Additions follow the same rules as the whitelist: `[class*=...]` prefix
+selectors only, derived from recon reports, and recorded here.
 
 ## Considered and rejected
 

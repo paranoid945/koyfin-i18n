@@ -2608,3 +2608,319 @@ Annual (Y):
   de: Jährlich (Y)
   fr: Annuel (Y)
   es: Anual (Y)
+
+# --- Home dashboard panels (recon 2026-07-11) ---
+
+U.S. Equity Markets:
+  zh_CN: 美国股市
+  zh_TW: 美國股市
+  ja: 米国株式市場
+  ko: 미국 주식 시장
+  de: US-Aktienmärkte
+  fr: Marchés actions américains
+  es: Mercados de renta variable de EE. UU.
+U.S. Equity Sectors:
+  zh_CN: 美国行业板块
+  zh_TW: 美國行業板塊
+  ja: 米国株セクター
+  ko: 미국 주식 섹터
+  de: US-Aktiensektoren
+  fr: Secteurs actions américains
+  es: Sectores bursátiles de EE. UU.
+Global Markets:
+  zh_CN: 全球市场
+  zh_TW: 全球市場
+  ja: 世界市場
+  ko: 글로벌 시장
+  de: Globale Märkte
+  fr: Marchés mondiaux
+  es: Mercados globales
+Normalized Performance:
+  zh_CN: 归一化表现
+  zh_TW: 標準化表現
+  ja: 正規化パフォーマンス
+  ko: 정규화 성과
+  de: Normalisierte Performance
+  fr: Performance normalisée
+  es: Rendimiento normalizado
+US Equity Factors:
+  zh_CN: 美股因子
+  zh_TW: 美股因子
+  ja: 米国株ファクター
+  ko: 미국 주식 팩터
+  de: US-Aktienfaktoren
+  fr: Facteurs actions US
+  es: Factores de renta variable de EE. UU.
+
+# --- Snapshot panels (recon 2026-07-11) ---
+
+Snapshot Chart:
+  zh_CN: 快照图表
+  zh_TW: 快照圖表
+  ja: スナップショットチャート
+  ko: 스냅샷 차트
+  de: Snapshot-Chart
+  fr: Graphique instantané
+  es: Gráfico instantáneo
+Key Data:
+  zh_CN: 关键数据
+  zh_TW: 關鍵數據
+  ja: 主要データ
+  ko: 주요 데이터
+  de: Wichtige Daten
+  fr: Données clés
+  es: Datos clave
+Performance Returns:
+  zh_CN: 收益表现
+  zh_TW: 收益表現
+  ja: パフォーマンスリターン
+  ko: 성과 수익률
+  de: Performance-Renditen
+  fr: Rendements de performance
+  es: Rentabilidades
+Capital Structure:
+  zh_CN: 资本结构
+  zh_TW: 資本結構
+  ja: 資本構成
+  ko: 자본 구조
+  de: Kapitalstruktur
+  fr: Structure du capital
+  es: Estructura de capital
+Price Data:
+  zh_CN: 价格数据
+  zh_TW: 價格數據
+  ja: 価格データ
+  ko: 가격 데이터
+  de: Kursdaten
+  fr: Données de prix
+  es: Datos de precios
+Dividend Information:
+  zh_CN: 股息信息
+  zh_TW: 股息資訊
+  ja: 配当情報
+  ko: 배당 정보
+  de: Dividendeninformationen
+  fr: Informations sur les dividendes
+  es: Información de dividendos
+Related Securities:
+  zh_CN: 相关证券
+  zh_TW: 相關證券
+  ja: 関連銘柄
+  ko: 관련 증권
+  de: Verwandte Wertpapiere
+  fr: Titres liés
+  es: Valores relacionados
+
+# --- Earnings snapshot (recon 2026-07-11) ---
+
+Earnings Results vs Analyst Estimates:
+  zh_CN: 财报结果与分析师预期对比
+  zh_TW: 財報結果與分析師預期對比
+  ja: 決算実績とアナリスト予想の比較
+  ko: 실적 결과 vs 애널리스트 전망
+  de: Ergebnisse vs. Analystenschätzungen
+  fr: Résultats vs estimations des analystes
+  es: Resultados vs estimaciones de analistas
+Earnings History & Surprises:
+  zh_CN: 财报历史与超预期记录
+  zh_TW: 財報歷史與超預期記錄
+  ja: 決算履歴とサプライズ
+  ko: 실적 이력 및 서프라이즈
+  de: Ergebnishistorie & Überraschungen
+  fr: Historique des résultats et surprises
+  es: Historial de resultados y sorpresas
+Fiscal Period:
+  zh_CN: 财政期间
+  zh_TW: 財政期間
+  ja: 会計期間
+  ko: 회계 기간
+  de: Geschäftsperiode
+  fr: Période fiscale
+  es: Período fiscal
+Period Ending:
+  zh_CN: 期末日期
+  zh_TW: 期末日期
+  ja: 期末日
+  ko: 기말일
+  de: Periodenende
+  fr: Fin de période
+  es: Fin del período
+Report Date:
+  zh_CN: 财报日期
+  zh_TW: 財報日期
+  ja: 発表日
+  ko: 발표일
+  de: Berichtsdatum
+  fr: Date de publication
+  es: Fecha de publicación
+Est Low Sales:
+  zh_CN: 销售预估下限
+  zh_TW: 銷售預估下限
+  ja: 売上予想（下限）
+  ko: 매출 전망 하한
+  de: Umsatzschätzung (Min.)
+  fr: Ventes est. (basse)
+  es: Ventas est. (mín.)
+Est High Sales:
+  zh_CN: 销售预估上限
+  zh_TW: 銷售預估上限
+  ja: 売上予想（上限）
+  ko: 매출 전망 상한
+  de: Umsatzschätzung (Max.)
+  fr: Ventes est. (haute)
+  es: Ventas est. (máx.)
+Est Avg Sales:
+  zh_CN: 销售预估均值
+  zh_TW: 銷售預估均值
+  ja: 売上予想（平均）
+  ko: 매출 전망 평균
+  de: Umsatzschätzung (Mittel)
+  fr: Ventes est. (moyenne)
+  es: Ventas est. (media)
+Actual Sales:
+  zh_CN: 实际销售额
+  zh_TW: 實際銷售額
+  ja: 売上実績
+  ko: 실제 매출
+  de: Tatsächlicher Umsatz
+  fr: Ventes réelles
+  es: Ventas reales
+Sales Surprise:
+  zh_CN: 销售超预期幅度
+  zh_TW: 銷售超預期幅度
+  ja: 売上サプライズ
+  ko: 매출 서프라이즈
+  de: Umsatzüberraschung
+  fr: Surprise sur les ventes
+  es: Sorpresa en ventas
+Surprise (%):
+  zh_CN: 超预期幅度（%）
+  zh_TW: 超預期幅度（%）
+  ja: サプライズ（%）
+  ko: 서프라이즈 (%)
+  de: Überraschung (%)
+  fr: Surprise (%)
+  es: Sorpresa (%)
+1D Price Reaction(%):
+  zh_CN: 1日价格反应（%）
+  zh_TW: 1日價格反應（%）
+  ja: 1日株価反応（%）
+  ko: 1일 주가 반응 (%)
+  de: 1T-Kursreaktion (%)
+  fr: Réaction du cours (1 j, %)
+  es: Reacción del precio (1D, %)
+EV/Sales:
+  zh_CN: EV/销售额
+  zh_TW: EV/銷售額
+  ja: EV/売上高
+  ko: EV/매출
+  de: EV/Umsatz
+  fr: VE/CA
+  es: EV/Ventas
+
+# --- Market News page (recon 2026-07-11) ---
+
+Top News:
+  zh_CN: 头条新闻
+  zh_TW: 頭條新聞
+  ja: トップニュース
+  ko: 주요 뉴스
+  de: Top-Nachrichten
+  fr: À la une
+  es: Noticias destacadas
+Corporate Events:
+  zh_CN: 公司事件
+  zh_TW: 公司事件
+  ja: 企業イベント
+  ko: 기업 이벤트
+  de: Unternehmensereignisse
+  fr: Événements d'entreprise
+  es: Eventos corporativos
+Industries:
+  zh_CN: 行业
+  zh_TW: 行業
+  ja: 業界
+  ko: 산업
+  de: Branchen
+  fr: Industries
+  es: Industrias
+Macro:
+  zh_CN: 宏观
+  zh_TW: 宏觀
+  ja: マクロ
+  ko: 매크로
+  de: Makro
+  fr: Macro
+  es: Macro
+World Economy:
+  zh_CN: 世界经济
+  zh_TW: 世界經濟
+  ja: 世界経済
+  ko: 세계 경제
+  de: Weltwirtschaft
+  fr: Économie mondiale
+  es: Economía mundial
+Newsletters:
+  zh_CN: 新闻简报
+  zh_TW: 新聞簡報
+  ja: ニュースレター
+  ko: 뉴스레터
+  de: Newsletter
+  fr: Newsletters
+  es: Boletines
+Analyst Changes:
+  zh_CN: 分析师评级变动
+  zh_TW: 分析師評級變動
+  ja: アナリスト評価変更
+  ko: 애널리스트 의견 변경
+  de: Analystenänderungen
+  fr: Changements d'analystes
+  es: Cambios de analistas
+RSS Financial News:
+  zh_CN: RSS 财经新闻
+  zh_TW: RSS 財經新聞
+  ja: RSSフィナンシャルニュース
+  ko: RSS 금융 뉴스
+  de: RSS-Finanznachrichten
+  fr: Actualités financières RSS
+  es: Noticias financieras RSS
+Trending News:
+  zh_CN: 热门新闻
+  zh_TW: 熱門新聞
+  ja: 注目ニュース
+  ko: 인기 뉴스
+  de: Trend-Nachrichten
+  fr: Actualités tendance
+  es: Noticias en tendencia
+Latest News:
+  zh_CN: 最新新闻
+  zh_TW: 最新新聞
+  ja: 最新ニュース
+  ko: 최신 뉴스
+  de: Neueste Nachrichten
+  fr: Dernières actualités
+  es: Últimas noticias
+American Markets:
+  zh_CN: 美洲市场
+  zh_TW: 美洲市場
+  ja: 米州市場
+  ko: 미주 시장
+  de: Amerikanische Märkte
+  fr: Marchés américains
+  es: Mercados americanos
+European Markets:
+  zh_CN: 欧洲市场
+  zh_TW: 歐洲市場
+  ja: 欧州市場
+  ko: 유럽 시장
+  de: Europäische Märkte
+  fr: Marchés européens
+  es: Mercados europeos
+Asian Pacific Markets:
+  zh_CN: 亚太市场
+  zh_TW: 亞太市場
+  ja: アジア太平洋市場
+  ko: 아시아 태평양 시장
+  de: Asiatisch-pazifische Märkte
+  fr: Marchés Asie-Pacifique
+  es: Mercados de Asia-Pacífico
