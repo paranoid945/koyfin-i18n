@@ -33,12 +33,21 @@ The core design problem: distinguish static UI (translate) from financial data �
 tickers, company/fund names — that may literally equal dictionary words (a fund
 named "High", a nav item "Close"). Two independent layers:
 
-1. **Scope whitelist** (`src/scopes.json`): translation only happens inside DOM
-   subtrees matching `whitelist` selectors (nav, table headers, buttons, dialogs,
-   labels); `exclude` selectors punch holes inside them (ticker widgets,
-   function shortcodes). Data regions are structurally unreachable.
+1. **Scope whitelist** (`src/scopes.json`): dictionary translation only happens
+   inside DOM subtrees matching `whitelist` selectors (nav, table headers,
+   buttons, dialogs, labels); `exclude` selectors punch holes inside them
+   (ticker widgets, function shortcodes). Data regions are structurally
+   unreachable.
 2. **Exact-match dictionary**: within a scope, unknown strings (e.g. user-named
    watchlists) are never touched.
+
+A third scope category, `dynamic`, marks machine-translated content regions
+(news, descriptions) — opt-in via the popup, engine = Chrome built-in
+Translator API (on-device, default) or Google Cloud Translation v2 via the
+user's own key (`src/background.js` proxies those calls; key lives in
+`chrome.storage.local`, never sync). Dictionary hits win inside dynamic scopes;
+per-language cache (`dynCache`); `dynamic` is empty until populated from recon
+reports of the news/profile pages.
 
 `docs/SCOPES.md` is the human decision log for the whitelist (including
 deliberately rejected scopes, e.g. the third-party CookieYes banner). Any change
@@ -73,6 +82,15 @@ src/content.js                   (translates within scopes; settings in chrome.s
   requestIdleCallback slices (SLICE_BUDGET_MS). Don't move the fast path back
   to idle-only — that causes a visible flash on every SPA update.
 - **No-op write guards** (`if (value !== next)`) prevent observer feedback loops.
+- **Static/dynamic path ownership**: dynamic (machine) translation records carry
+  a `lang` field; static records don't. The dictionary pass MUST skip nodes
+  holding a live dynamic translation (`rec.lang !== undefined && value ===
+  rec.translated`) — static and dynamic scopes overlap on real pages (news
+  headlines are `label.text-label` inside `koy-news-item`), and without this
+  guard the two paths revert/re-apply each other forever and freeze the page.
+- **Engine circuit breaker**: `dynamicBroken` latches on any engine failure and
+  resets only on settings changes — otherwise every DOM mutation retries the
+  full failing batch.
 - The 300-char text length cap is duplicated in `tools/audit.template.js`
   (`looksLikeUiLabel`) — keep them in sync, and keep the skip rules
   (SKIP_SUBTREE_TAGS, namespace check, exclude selectors) in sync as well.
@@ -99,6 +117,14 @@ src/content.js                   (translates within scopes; settings in chrome.s
    then `npm run build`.
 
 ## Gotchas
+
+- `Translator.availability()` is masked per-origin (anti-fingerprinting): an
+  origin that never called `create()` gets "downloadable" even when the pack
+  is installed. The popup therefore asks the content script for ground truth
+  (`builtinStatus` message) and only falls back to availability probing; never
+  present raw availability as "installed / not installed". Pack downloads need
+  a user gesture — popup clicks have one, content scripts may not (that's what
+  the engine circuit breaker catches).
 
 - Editing repo files with PowerShell `Get-Content`/`Set-Content` corrupts UTF-8
   (reads as ANSI on this machine). Use the Read/Write/Edit tools instead.

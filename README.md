@@ -26,13 +26,16 @@ offline dictionary.
   name happens to equal a dictionary word. Within a scope, exact-match is
   the second protection layer: unknown strings (e.g. user-named
   watchlists) stay as-is.
-- ❌ Does **not** translate dynamic content such as news articles, company
-  descriptions, or transcripts. Machine-translation of dynamic content
-  (e.g. via an external translation engine) may be considered in a future
-  version.
-- 🔒 No data leaves your browser. No network requests, no analytics, no
-  tracking. The only permission used is `storage` (to remember your
-  language choice).
+- 🌐 Optionally translates **dynamic content** (news headlines, company
+  descriptions) in designated `dynamic` scopes — off by default. Engine
+  choice: Chrome's built-in on-device Translator API (free, private,
+  Chrome 138+) or the Google Cloud Translation API with your own key
+  (500k characters/month free tier). Results are cached per language and
+  dictionary matches always take precedence.
+- 🔒 Static translation never makes network requests; no analytics, no
+  tracking. With dynamic translation enabled, text either stays on-device
+  (built-in engine) or goes to Google under your own key — see
+  [PRIVACY.md](PRIVACY.md).
 
 ## Performance
 

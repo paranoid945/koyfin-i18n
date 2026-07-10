@@ -41,6 +41,46 @@ input[type="checkbox"] {
   height: 16px;
 }
 
+hr {
+  border: none;
+  border-top: 1px solid color-mix(in srgb, currentColor 15%, transparent);
+  margin: 10px 0;
+}
+
+.row small {
+  color: color-mix(in srgb, currentColor 55%, transparent);
+  font-size: 11px;
+}
+
+input[type="password"] {
+  width: 130px;
+  padding: 3px 4px;
+}
+
+.status {
+  font-size: 12px;
+}
+
+/* Colors chosen to stay readable in both light and dark popup themes */
+.status--ok {
+  color: #16a34a;
+}
+
+.status--warn {
+  color: #d97706;
+  font-weight: 600;
+}
+
+.status--err {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+button#download-pack {
+  padding: 3px 10px;
+  cursor: pointer;
+}
+
 .note {
   margin: 10px 0 6px;
   color: color-mix(in srgb, currentColor 60%, transparent);

@@ -29,8 +29,37 @@
       </select>
     </label>
 
+    <hr />
+
+    <label class="row toggle">
+      <span>Translate dynamic content<br /><small>market news, descriptions, …</small></span>
+      <input type="checkbox" id="dynamic" />
+    </label>
+
+    <div id="dynamic-options" hidden>
+      <label class="row">
+        <span>Engine</span>
+        <select id="engine">
+          <option value="builtin">Chrome built-in (on-device)</option>
+          <option value="google">Google Cloud Translation</option>
+        </select>
+      </label>
+
+      <label class="row" id="key-row" hidden>
+        <span>API key</span>
+        <input type="password" id="apikey" placeholder="Google API key" autocomplete="off" />
+      </label>
+
+      <p class="note" id="engine-note"></p>
+
+      <div class="row" id="builtin-status-row" hidden>
+        <span class="status" id="builtin-status"></span>
+        <button id="download-pack" hidden>Enable</button>
+      </div>
+    </div>
+
     <p class="note">
-      Translates static interface labels on koyfin.com using an offline
+      Static interface labels are translated with a fully offline
       dictionary. Changes apply immediately on open Koyfin tabs.
     </p>
 
