@@ -1,0 +1,59 @@
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  width: 260px;
+  margin: 0;
+  padding: 12px 14px;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 13px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+h1 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 6px 0;
+}
+
+select {
+  min-width: 120px;
+  padding: 3px 4px;
+}
+
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
+
+.note {
+  margin: 10px 0 6px;
+  color: color-mix(in srgb, currentColor 60%, transparent);
+  line-height: 1.4;
+}
+
+footer {
+  border-top: 1px solid color-mix(in srgb, currentColor 15%, transparent);
+  padding-top: 8px;
+  font-size: 12px;
+}
+
+footer a {
+  color: #2dd4bf;
+  text-decoration: none;
+}

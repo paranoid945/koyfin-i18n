@@ -1,0 +1,17 @@
+{
+  "name": "koyfin-i18n",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Chrome extension that translates Koyfin's static UI into several languages using an offline dictionary.",
+  "scripts": {
+    "build": "node tools/build-locales.js && node tools/make-icons.js",
+    "build:locales": "node tools/build-locales.js",
+    "build:icons": "node tools/make-icons.js",
+    "audit": "node tools/build-audit.js",
+    "package": "node tools/package.js"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "js-yaml": "^5.2.1"
+  }
+}

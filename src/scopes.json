@@ -1,0 +1,31 @@
+{
+  "comment": "Translation scope whitelist. See docs/SCOPES.md for what each selector covers, the decision log, and how to maintain this file.",
+  "whitelist": [
+    "nav[class*='navi-panel-layout'] a[class*='navi-panel-list-item']",
+    "nav[class*='navi-panel-layout'] button[class*='navi-panel-section']",
+    "[class*='table-styles__table__head']",
+    "[class*='mobile-table-header__headerCell']",
+    "button[class*='base-button']",
+    "button[class*='primary-button']",
+    "[class*='top-header__topHeader__root']",
+    "[class*='console__label']",
+    "[class*='koy-tab-item__koyTabItem__label']",
+    "label[class*='text-label']",
+    "[class*='chart-toolbar-styles__toolbar']",
+    "[class*='chart-sidebar-styles__tabs']",
+    "h2[class*='chart-sidebar-styles__headerTitle']",
+    "[class*='chart-sidebar-styles__securityBtn']",
+    "[class*='block-string__label']",
+    "[class*='content-sidebar-header']",
+    "[class*='menu-input__value']",
+    "[class*='rc-dialog-content']",
+    "a[class*='skipLink']"
+  ],
+  "exclude": [
+    "[class*='navi-panel-func']",
+    "[class*='navi-panel-ticker-info']",
+    "[class*='quote-box-security-dropdown']",
+    "[class*='time-frame-options']",
+    "[class*='time-range']"
+  ]
+}

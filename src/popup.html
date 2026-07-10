@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Koyfin UI Translator</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <img src="../icons/icon32.png" alt="" width="20" height="20" />
+      <h1>Koyfin UI Translator</h1>
+    </header>
+
+    <label class="row toggle">
+      <span>Enable translation</span>
+      <input type="checkbox" id="enabled" />
+    </label>
+
+    <label class="row">
+      <span>Language</span>
+      <select id="lang">
+        <option value="zh_CN">简体中文</option>
+        <option value="zh_TW">繁體中文</option>
+        <option value="ja">日本語</option>
+        <option value="ko">한국어</option>
+        <option value="de">Deutsch</option>
+        <option value="fr">Français</option>
+        <option value="es">Español</option>
+      </select>
+    </label>
+
+    <p class="note">
+      Translates static interface labels on koyfin.com using an offline
+      dictionary. Changes apply immediately on open Koyfin tabs.
+    </p>
+
+    <footer>
+      <a href="https://github.com/paranoid945/koyfin-i18n" target="_blank" rel="noreferrer">Open source on GitHub</a>
+    </footer>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

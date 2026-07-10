@@ -1,0 +1,2610 @@
+# Master translation dictionary — the single source of truth.
+# Each entry maps an English UI string (exactly as it appears on koyfin.com)
+# to its translations. Every entry must provide all seven languages.
+# Generate the per-language files with: node tools/build-locales.js
+
+# --- Navigation & account ---
+
+Home:
+  zh_CN: 首页
+  zh_TW: 首頁
+  ja: ホーム
+  ko: 홈
+  de: Startseite
+  fr: Accueil
+  es: Inicio
+Dashboards:
+  zh_CN: 仪表盘
+  zh_TW: 儀表板
+  ja: ダッシュボード
+  ko: 대시보드
+  de: Dashboards
+  fr: Tableaux de bord
+  es: Paneles
+My Dashboards:
+  zh_CN: 我的仪表盘
+  zh_TW: 我的儀表板
+  ja: マイダッシュボード
+  ko: 내 대시보드
+  de: Meine Dashboards
+  fr: Mes tableaux de bord
+  es: Mis paneles
+Market Dashboards:
+  zh_CN: 市场仪表盘
+  zh_TW: 市場儀表板
+  ja: 市場ダッシュボード
+  ko: 시장 대시보드
+  de: Markt-Dashboards
+  fr: Tableaux de bord des marchés
+  es: Paneles de mercado
+Watchlists:
+  zh_CN: 自选列表
+  zh_TW: 自選清單
+  ja: ウォッチリスト
+  ko: 관심 목록
+  de: Watchlists
+  fr: Listes de surveillance
+  es: Listas de seguimiento
+My Watchlists:
+  zh_CN: 我的自选
+  zh_TW: 我的自選
+  ja: マイウォッチリスト
+  ko: 내 관심 목록
+  de: Meine Watchlists
+  fr: Mes listes de surveillance
+  es: Mis listas de seguimiento
+New Watchlist:
+  zh_CN: 新建自选列表
+  zh_TW: 新增自選清單
+  ja: 新しいウォッチリスト
+  ko: 새 관심 목록
+  de: Neue Watchlist
+  fr: Nouvelle liste de surveillance
+  es: Nueva lista de seguimiento
+Market News:
+  zh_CN: 市场新闻
+  zh_TW: 市場新聞
+  ja: マーケットニュース
+  ko: 시장 뉴스
+  de: Marktnachrichten
+  fr: Actualités du marché
+  es: Noticias del mercado
+News:
+  zh_CN: 新闻
+  zh_TW: 新聞
+  ja: ニュース
+  ko: 뉴스
+  de: Nachrichten
+  fr: Actualités
+  es: Noticias
+News & Events:
+  zh_CN: 新闻与事件
+  zh_TW: 新聞與事件
+  ja: ニュースとイベント
+  ko: 뉴스 및 이벤트
+  de: Nachrichten & Ereignisse
+  fr: Actualités et événements
+  es: Noticias y eventos
+Screener:
+  zh_CN: 筛选器
+  zh_TW: 篩選器
+  ja: スクリーナー
+  ko: 스크리너
+  de: Aktien-Screener
+  fr: Filtre d'actions
+  es: Filtro de valores
+My Screens:
+  zh_CN: 我的筛选
+  zh_TW: 我的篩選
+  ja: マイスクリーン
+  ko: 내 스크린
+  de: Meine Screens
+  fr: Mes filtres
+  es: Mis filtros
+Charts:
+  zh_CN: 图表
+  zh_TW: 圖表
+  ja: チャート
+  ko: 차트
+  de: Charts
+  fr: Graphiques
+  es: Gráficos
+My Charts:
+  zh_CN: 我的图表
+  zh_TW: 我的圖表
+  ja: マイチャート
+  ko: 내 차트
+  de: Meine Charts
+  fr: Mes graphiques
+  es: Mis gráficos
+Snapshots:
+  zh_CN: 快照
+  zh_TW: 快照
+  ja: スナップショット
+  ko: 스냅샷
+  de: Snapshots
+  fr: Instantanés
+  es: Instantáneas
+Analytics:
+  zh_CN: 分析
+  zh_TW: 分析
+  ja: アナリティクス
+  ko: 분석
+  de: Analysen
+  fr: Analyses
+  es: Análisis
+Research:
+  zh_CN: 研究
+  zh_TW: 研究
+  ja: リサーチ
+  ko: 리서치
+  de: Research
+  fr: Recherche
+  es: Investigación
+Settings:
+  zh_CN: 设置
+  zh_TW: 設定
+  ja: 設定
+  ko: 설정
+  de: Einstellungen
+  fr: Paramètres
+  es: Configuración
+Help:
+  zh_CN: 帮助
+  zh_TW: 說明
+  ja: ヘルプ
+  ko: 도움말
+  de: Hilfe
+  fr: Aide
+  es: Ayuda
+Help Center:
+  zh_CN: 帮助中心
+  zh_TW: 說明中心
+  ja: ヘルプセンター
+  ko: 도움말 센터
+  de: Hilfe-Center
+  fr: Centre d'aide
+  es: Centro de ayuda
+Log In:
+  zh_CN: 登录
+  zh_TW: 登入
+  ja: ログイン
+  ko: 로그인
+  de: Anmelden
+  fr: Connexion
+  es: Iniciar sesión
+Sign In:
+  zh_CN: 登录
+  zh_TW: 登入
+  ja: サインイン
+  ko: 로그인
+  de: Anmelden
+  fr: Se connecter
+  es: Iniciar sesión
+Sign Up:
+  zh_CN: 注册
+  zh_TW: 註冊
+  ja: 新規登録
+  ko: 가입하기
+  de: Registrieren
+  fr: S'inscrire
+  es: Registrarse
+Log Out:
+  zh_CN: 退出登录
+  zh_TW: 登出
+  ja: ログアウト
+  ko: 로그아웃
+  de: Abmelden
+  fr: Déconnexion
+  es: Cerrar sesión
+Sign Out:
+  zh_CN: 退出登录
+  zh_TW: 登出
+  ja: サインアウト
+  ko: 로그아웃
+  de: Abmelden
+  fr: Se déconnecter
+  es: Cerrar sesión
+Search:
+  zh_CN: 搜索
+  zh_TW: 搜尋
+  ja: 検索
+  ko: 검색
+  de: Suche
+  fr: Rechercher
+  es: Buscar
+Upgrade:
+  zh_CN: 升级
+  zh_TW: 升級
+  ja: アップグレード
+  ko: 업그레이드
+  de: Upgrade
+  fr: Mettre à niveau
+  es: Mejorar plan
+Pricing:
+  zh_CN: 价格方案
+  zh_TW: 價格方案
+  ja: 料金プラン
+  ko: 요금제
+  de: Preise
+  fr: Tarifs
+  es: Precios
+Account:
+  zh_CN: 账户
+  zh_TW: 帳戶
+  ja: アカウント
+  ko: 계정
+  de: Konto
+  fr: Compte
+  es: Cuenta
+Profile:
+  zh_CN: 公司简介
+  zh_TW: 公司簡介
+  ja: プロフィール
+  ko: 프로필
+  de: Profil
+  fr: Profil
+  es: Perfil
+Notifications:
+  zh_CN: 通知
+  zh_TW: 通知
+  ja: 通知
+  ko: 알림
+  de: Benachrichtigungen
+  fr: Notifications
+  es: Notificaciones
+Alerts:
+  zh_CN: 提醒
+  zh_TW: 提醒
+  ja: アラート
+  ko: 알림 설정
+  de: Alarme
+  fr: Alertes
+  es: Alertas
+
+# --- Asset classes ---
+
+Equities:
+  zh_CN: 股票
+  zh_TW: 股票
+  ja: 株式
+  ko: 주식
+  de: Aktien
+  fr: Actions
+  es: Acciones
+Stocks:
+  zh_CN: 股票
+  zh_TW: 股票
+  ja: 株式
+  ko: 주식
+  de: Aktien
+  fr: Actions
+  es: Acciones
+Fixed Income:
+  zh_CN: 固定收益
+  zh_TW: 固定收益
+  ja: 債券
+  ko: 채권
+  de: Anleihen
+  fr: Obligations
+  es: Renta fija
+Bonds:
+  zh_CN: 债券
+  zh_TW: 債券
+  ja: 債券
+  ko: 채권
+  de: Anleihen
+  fr: Obligations
+  es: Bonos
+Currencies:
+  zh_CN: 货币
+  zh_TW: 貨幣
+  ja: 通貨
+  ko: 통화
+  de: Währungen
+  fr: Devises
+  es: Divisas
+Commodities:
+  zh_CN: 大宗商品
+  zh_TW: 大宗商品
+  ja: 商品
+  ko: 원자재
+  de: Rohstoffe
+  fr: Matières premières
+  es: Materias primas
+Economics:
+  zh_CN: 经济数据
+  zh_TW: 經濟數據
+  ja: 経済
+  ko: 경제
+  de: Wirtschaft
+  fr: Économie
+  es: Economía
+Crypto:
+  zh_CN: 加密货币
+  zh_TW: 加密貨幣
+  ja: 暗号資産
+  ko: 암호화폐
+  de: Krypto
+  fr: Crypto
+  es: Cripto
+Indices:
+  zh_CN: 指数
+  zh_TW: 指數
+  ja: 指数
+  ko: 지수
+  de: Indizes
+  fr: Indices
+  es: Índices
+Sectors:
+  zh_CN: 行业板块
+  zh_TW: 產業類股
+  ja: セクター
+  ko: 섹터
+  de: Sektoren
+  fr: Secteurs
+  es: Sectores
+ETFs:
+  zh_CN: ETF
+  zh_TW: ETF
+  ja: ETF
+  ko: ETF
+  de: ETFs
+  fr: ETF
+  es: ETF
+Mutual Funds:
+  zh_CN: 共同基金
+  zh_TW: 共同基金
+  ja: 投資信託
+  ko: 뮤추얼 펀드
+  de: Investmentfonds
+  fr: Fonds communs de placement
+  es: Fondos de inversión
+Futures:
+  zh_CN: 期货
+  zh_TW: 期貨
+  ja: 先物
+  ko: 선물
+  de: Futures
+  fr: Contrats à terme
+  es: Futuros
+Options:
+  zh_CN: 期权
+  zh_TW: 選擇權
+  ja: オプション
+  ko: 옵션
+  de: Optionen
+  fr: Options
+  es: Opciones
+
+# --- Security page sections ---
+
+Overview:
+  zh_CN: 概览
+  zh_TW: 概覽
+  ja: 概要
+  ko: 개요
+  de: Übersicht
+  fr: Aperçu
+  es: Resumen general
+Price Analysis:
+  zh_CN: 价格分析
+  zh_TW: 價格分析
+  ja: 価格分析
+  ko: 가격 분석
+  de: Kursanalyse
+  fr: Analyse des prix
+  es: Análisis de precios
+Financial Analysis:
+  zh_CN: 财务分析
+  zh_TW: 財務分析
+  ja: 財務分析
+  ko: 재무 분석
+  de: Finanzanalyse
+  fr: Analyse financière
+  es: Análisis financiero
+Estimates:
+  zh_CN: 分析师预测
+  zh_TW: 分析師預測
+  ja: 業績予想
+  ko: 실적 전망
+  de: Schätzungen
+  fr: Estimations
+  es: Estimaciones
+Dividends:
+  zh_CN: 股息
+  zh_TW: 股息
+  ja: 配当
+  ko: 배당
+  de: Dividenden
+  fr: Dividendes
+  es: Dividendos
+Filings:
+  zh_CN: 公司公告
+  zh_TW: 公司公告
+  ja: 開示資料
+  ko: 공시
+  de: Einreichungen
+  fr: Dépôts réglementaires
+  es: Presentaciones
+Holdings:
+  zh_CN: 持仓
+  zh_TW: 持倉
+  ja: 保有銘柄
+  ko: 보유 종목
+  de: Positionen
+  fr: Positions
+  es: Posiciones
+Description:
+  zh_CN: 公司描述
+  zh_TW: 公司描述
+  ja: 会社概要
+  ko: 회사 설명
+  de: Beschreibung
+  fr: Description
+  es: Descripción
+Key Stats:
+  zh_CN: 关键统计
+  zh_TW: 關鍵統計
+  ja: 主要統計
+  ko: 주요 통계
+  de: Kennzahlen
+  fr: Statistiques clés
+  es: Estadísticas clave
+Highlights:
+  zh_CN: 亮点
+  zh_TW: 亮點
+  ja: ハイライト
+  ko: 하이라이트
+  de: Highlights
+  fr: Points clés
+  es: Aspectos destacados
+Financials:
+  zh_CN: 财务数据
+  zh_TW: 財務數據
+  ja: 財務
+  ko: 재무
+  de: Finanzdaten
+  fr: Données financières
+  es: Datos financieros
+Income Statement:
+  zh_CN: 利润表
+  zh_TW: 損益表
+  ja: 損益計算書
+  ko: 손익계산서
+  de: Gewinn- und Verlustrechnung
+  fr: Compte de résultat
+  es: Estado de resultados
+Balance Sheet:
+  zh_CN: 资产负债表
+  zh_TW: 資產負債表
+  ja: 貸借対照表
+  ko: 재무상태표
+  de: Bilanz
+  fr: Bilan
+  es: Balance general
+Cash Flow Statement:
+  zh_CN: 现金流量表
+  zh_TW: 現金流量表
+  ja: キャッシュフロー計算書
+  ko: 현금흐름표
+  de: Kapitalflussrechnung
+  fr: Tableau des flux de trésorerie
+  es: Estado de flujo de efectivo
+Ratios:
+  zh_CN: 财务比率
+  zh_TW: 財務比率
+  ja: 財務指標
+  ko: 재무 비율
+  de: Finanzkennzahlen
+  fr: Ratios
+  es: Ratios
+Valuation:
+  zh_CN: 估值
+  zh_TW: 估值
+  ja: バリュエーション
+  ko: 밸류에이션
+  de: Bewertung
+  fr: Valorisation
+  es: Valoración
+Performance:
+  zh_CN: 表现
+  zh_TW: 表現
+  ja: パフォーマンス
+  ko: 성과
+  de: Performance
+  fr: Performance
+  es: Rendimiento
+Technicals:
+  zh_CN: 技术指标
+  zh_TW: 技術指標
+  ja: テクニカル
+  ko: 기술적 지표
+  de: Technische Indikatoren
+  fr: Indicateurs techniques
+  es: Indicadores técnicos
+Ownership:
+  zh_CN: 股权结构
+  zh_TW: 股權結構
+  ja: 株主構成
+  ko: 지분 구조
+  de: Eigentümerstruktur
+  fr: Actionnariat
+  es: Accionariado
+Transcripts:
+  zh_CN: 电话会议记录
+  zh_TW: 電話會議記錄
+  ja: 決算説明会記録
+  ko: 실적 발표 기록
+  de: Transkripte
+  fr: Transcriptions
+  es: Transcripciones
+Earnings:
+  zh_CN: 财报
+  zh_TW: 財報
+  ja: 決算
+  ko: 실적
+  de: Ergebnisse
+  fr: Résultats
+  es: Resultados
+Earnings Calendar:
+  zh_CN: 财报日历
+  zh_TW: 財報日曆
+  ja: 決算カレンダー
+  ko: 실적 캘린더
+  de: Ergebniskalender
+  fr: Calendrier des résultats
+  es: Calendario de resultados
+Economic Calendar:
+  zh_CN: 经济日历
+  zh_TW: 經濟日曆
+  ja: 経済カレンダー
+  ko: 경제 캘린더
+  de: Wirtschaftskalender
+  fr: Calendrier économique
+  es: Calendario económico
+Dividend Calendar:
+  zh_CN: 股息日历
+  zh_TW: 股息日曆
+  ja: 配当カレンダー
+  ko: 배당 캘린더
+  de: Dividendenkalender
+  fr: Calendrier des dividendes
+  es: Calendario de dividendos
+Calendar:
+  zh_CN: 日历
+  zh_TW: 日曆
+  ja: カレンダー
+  ko: 캘린더
+  de: Kalender
+  fr: Calendrier
+  es: Calendario
+Events:
+  zh_CN: 事件
+  zh_TW: 事件
+  ja: イベント
+  ko: 이벤트
+  de: Ereignisse
+  fr: Événements
+  es: Eventos
+Summary:
+  zh_CN: 摘要
+  zh_TW: 摘要
+  ja: サマリー
+  ko: 요약
+  de: Zusammenfassung
+  fr: Résumé
+  es: Resumen
+Details:
+  zh_CN: 详情
+  zh_TW: 詳情
+  ja: 詳細
+  ko: 상세 정보
+  de: Details
+  fr: Détails
+  es: Detalles
+
+# --- Table headers & metrics ---
+
+Name:
+  zh_CN: 名称
+  zh_TW: 名稱
+  ja: 名称
+  ko: 이름
+  de: Name
+  fr: Nom
+  es: Nombre
+Ticker:
+  zh_CN: 股票代码
+  zh_TW: 股票代碼
+  ja: ティッカー
+  ko: 티커
+  de: Ticker
+  fr: Ticker
+  es: Ticker
+Symbol:
+  zh_CN: 代码
+  zh_TW: 代碼
+  ja: シンボル
+  ko: 심볼
+  de: Symbol
+  fr: Symbole
+  es: Símbolo
+Price:
+  zh_CN: 价格
+  zh_TW: 價格
+  ja: 価格
+  ko: 가격
+  de: Kurs
+  fr: Prix
+  es: Precio
+Last Price:
+  zh_CN: 最新价
+  zh_TW: 最新價
+  ja: 現在値
+  ko: 현재가
+  de: Letzter Kurs
+  fr: Dernier prix
+  es: Último precio
+Change:
+  zh_CN: 涨跌
+  zh_TW: 漲跌
+  ja: 変化
+  ko: 변동
+  de: Veränderung
+  fr: Variation
+  es: Cambio
+'% Change':
+  zh_CN: 涨跌幅
+  zh_TW: 漲跌幅
+  ja: 変化率
+  ko: 변동률
+  de: Veränderung %
+  fr: Variation %
+  es: Cambio %
+Volume:
+  zh_CN: 成交量
+  zh_TW: 成交量
+  ja: 出来高
+  ko: 거래량
+  de: Volumen
+  fr: Volume
+  es: Volumen
+Market Cap:
+  zh_CN: 市值
+  zh_TW: 市值
+  ja: 時価総額
+  ko: 시가총액
+  de: Marktkapitalisierung
+  fr: Capitalisation boursière
+  es: Capitalización de mercado
+Open:
+  zh_CN: 开盘价
+  zh_TW: 開盤價
+  ja: 始値
+  ko: 시가
+  de: Eröffnung
+  fr: Ouverture
+  es: Apertura
+High:
+  zh_CN: 最高价
+  zh_TW: 最高價
+  ja: 高値
+  ko: 고가
+  de: Hoch
+  fr: Plus haut
+  es: Máximo
+Low:
+  zh_CN: 最低价
+  zh_TW: 最低價
+  ja: 安値
+  ko: 저가
+  de: Tief
+  fr: Plus bas
+  es: Mínimo
+Previous Close:
+  zh_CN: 昨收价
+  zh_TW: 昨收價
+  ja: 前日終値
+  ko: 전일 종가
+  de: Vortagesschluss
+  fr: Clôture précédente
+  es: Cierre anterior
+52 Week High:
+  zh_CN: 52周最高
+  zh_TW: 52週最高
+  ja: 52週高値
+  ko: 52주 최고가
+  de: 52-Wochen-Hoch
+  fr: Plus haut sur 52 semaines
+  es: Máximo de 52 semanas
+52 Week Low:
+  zh_CN: 52周最低
+  zh_TW: 52週最低
+  ja: 52週安値
+  ko: 52주 최저가
+  de: 52-Wochen-Tief
+  fr: Plus bas sur 52 semaines
+  es: Mínimo de 52 semanas
+Shares Outstanding:
+  zh_CN: 流通股本
+  zh_TW: 流通股本
+  ja: 発行済株式数
+  ko: 발행 주식 수
+  de: Ausstehende Aktien
+  fr: Actions en circulation
+  es: Acciones en circulación
+P/E Ratio:
+  zh_CN: 市盈率
+  zh_TW: 本益比
+  ja: PER
+  ko: 주가수익비율
+  de: KGV
+  fr: PER
+  es: PER
+Dividend Yield:
+  zh_CN: 股息率
+  zh_TW: 股息率
+  ja: 配当利回り
+  ko: 배당수익률
+  de: Dividendenrendite
+  fr: Rendement du dividende
+  es: Rentabilidad por dividendo
+Revenue:
+  zh_CN: 营业收入
+  zh_TW: 營業收入
+  ja: 売上高
+  ko: 매출
+  de: Umsatz
+  fr: Chiffre d'affaires
+  es: Ingresos
+Net Income:
+  zh_CN: 净利润
+  zh_TW: 淨利潤
+  ja: 純利益
+  ko: 순이익
+  de: Nettogewinn
+  fr: Résultat net
+  es: Beneficio neto
+Gross Profit:
+  zh_CN: 毛利润
+  zh_TW: 毛利潤
+  ja: 売上総利益
+  ko: 매출총이익
+  de: Bruttogewinn
+  fr: Marge brute
+  es: Beneficio bruto
+Operating Income:
+  zh_CN: 营业利润
+  zh_TW: 營業利潤
+  ja: 営業利益
+  ko: 영업이익
+  de: Betriebsergebnis
+  fr: Résultat d'exploitation
+  es: Beneficio operativo
+Free Cash Flow:
+  zh_CN: 自由现金流
+  zh_TW: 自由現金流
+  ja: フリーキャッシュフロー
+  ko: 잉여현금흐름
+  de: Freier Cashflow
+  fr: Flux de trésorerie disponible
+  es: Flujo de caja libre
+Total Assets:
+  zh_CN: 总资产
+  zh_TW: 總資產
+  ja: 総資産
+  ko: 총자산
+  de: Gesamtvermögen
+  fr: Actif total
+  es: Activos totales
+Sector:
+  zh_CN: 行业
+  zh_TW: 產業
+  ja: セクター
+  ko: 섹터
+  de: Sektor
+  fr: Secteur
+  es: Sector
+Industry:
+  zh_CN: 细分行业
+  zh_TW: 細分產業
+  ja: 業種
+  ko: 산업
+  de: Branche
+  fr: Industrie
+  es: Industria
+Country:
+  zh_CN: 国家
+  zh_TW: 國家
+  ja: 国
+  ko: 국가
+  de: Land
+  fr: Pays
+  es: País
+Exchange:
+  zh_CN: 交易所
+  zh_TW: 交易所
+  ja: 取引所
+  ko: 거래소
+  de: Börse
+  fr: Bourse
+  es: Bolsa
+Currency:
+  zh_CN: 货币
+  zh_TW: 貨幣
+  ja: 通貨
+  ko: 통화
+  de: Währung
+  fr: Devise
+  es: Divisa
+Employees:
+  zh_CN: 员工数
+  zh_TW: 員工數
+  ja: 従業員数
+  ko: 직원 수
+  de: Mitarbeiter
+  fr: Employés
+  es: Empleados
+
+# --- Actions ---
+
+Add:
+  zh_CN: 添加
+  zh_TW: 新增
+  ja: 追加
+  ko: 추가
+  de: Hinzufügen
+  fr: Ajouter
+  es: Añadir
+Edit:
+  zh_CN: 编辑
+  zh_TW: 編輯
+  ja: 編集
+  ko: 편집
+  de: Bearbeiten
+  fr: Modifier
+  es: Editar
+Delete:
+  zh_CN: 删除
+  zh_TW: 刪除
+  ja: 削除
+  ko: 삭제
+  de: Löschen
+  fr: Supprimer
+  es: Eliminar
+Remove:
+  zh_CN: 移除
+  zh_TW: 移除
+  ja: 削除
+  ko: 제거
+  de: Entfernen
+  fr: Retirer
+  es: Quitar
+Cancel:
+  zh_CN: 取消
+  zh_TW: 取消
+  ja: キャンセル
+  ko: 취소
+  de: Abbrechen
+  fr: Annuler
+  es: Cancelar
+Save:
+  zh_CN: 保存
+  zh_TW: 儲存
+  ja: 保存
+  ko: 저장
+  de: Speichern
+  fr: Enregistrer
+  es: Guardar
+Apply:
+  zh_CN: 应用
+  zh_TW: 套用
+  ja: 適用
+  ko: 적용
+  de: Anwenden
+  fr: Appliquer
+  es: Aplicar
+Reset:
+  zh_CN: 重置
+  zh_TW: 重設
+  ja: リセット
+  ko: 재설정
+  de: Zurücksetzen
+  fr: Réinitialiser
+  es: Restablecer
+Close:
+  zh_CN: 关闭
+  zh_TW: 關閉
+  ja: 閉じる
+  ko: 닫기
+  de: Schließen
+  fr: Fermer
+  es: Cerrar
+Done:
+  zh_CN: 完成
+  zh_TW: 完成
+  ja: 完了
+  ko: 완료
+  de: Fertig
+  fr: Terminé
+  es: Hecho
+Back:
+  zh_CN: 返回
+  zh_TW: 返回
+  ja: 戻る
+  ko: 뒤로
+  de: Zurück
+  fr: Retour
+  es: Atrás
+Next:
+  zh_CN: 下一步
+  zh_TW: 下一步
+  ja: 次へ
+  ko: 다음
+  de: Weiter
+  fr: Suivant
+  es: Siguiente
+Create:
+  zh_CN: 创建
+  zh_TW: 建立
+  ja: 作成
+  ko: 만들기
+  de: Erstellen
+  fr: Créer
+  es: Crear
+Duplicate:
+  zh_CN: 创建副本
+  zh_TW: 建立副本
+  ja: 複製
+  ko: 복제
+  de: Duplizieren
+  fr: Dupliquer
+  es: Duplicar
+Rename:
+  zh_CN: 重命名
+  zh_TW: 重新命名
+  ja: 名前を変更
+  ko: 이름 바꾸기
+  de: Umbenennen
+  fr: Renommer
+  es: Renombrar
+Share:
+  zh_CN: 分享
+  zh_TW: 分享
+  ja: 共有
+  ko: 공유
+  de: Teilen
+  fr: Partager
+  es: Compartir
+Export:
+  zh_CN: 导出
+  zh_TW: 匯出
+  ja: エクスポート
+  ko: 내보내기
+  de: Exportieren
+  fr: Exporter
+  es: Exportar
+Download:
+  zh_CN: 下载
+  zh_TW: 下載
+  ja: ダウンロード
+  ko: 다운로드
+  de: Herunterladen
+  fr: Télécharger
+  es: Descargar
+Refresh:
+  zh_CN: 刷新
+  zh_TW: 重新整理
+  ja: 更新
+  ko: 새로고침
+  de: Aktualisieren
+  fr: Actualiser
+  es: Actualizar
+Filter:
+  zh_CN: 筛选
+  zh_TW: 篩選
+  ja: フィルター
+  ko: 필터
+  de: Filtern
+  fr: Filtrer
+  es: Filtrar
+Sort:
+  zh_CN: 排序
+  zh_TW: 排序
+  ja: 並べ替え
+  ko: 정렬
+  de: Sortieren
+  fr: Trier
+  es: Ordenar
+Compare:
+  zh_CN: 对比
+  zh_TW: 比較
+  ja: 比較
+  ko: 비교
+  de: Vergleichen
+  fr: Comparer
+  es: Comparar
+Select All:
+  zh_CN: 全选
+  zh_TW: 全選
+  ja: すべて選択
+  ko: 모두 선택
+  de: Alle auswählen
+  fr: Tout sélectionner
+  es: Seleccionar todo
+Clear All:
+  zh_CN: 清除全部
+  zh_TW: 清除全部
+  ja: すべてクリア
+  ko: 모두 지우기
+  de: Alle löschen
+  fr: Tout effacer
+  es: Borrar todo
+Clear:
+  zh_CN: 清除
+  zh_TW: 清除
+  ja: クリア
+  ko: 지우기
+  de: Löschen
+  fr: Effacer
+  es: Borrar
+
+# --- Time & frequency ---
+
+Today:
+  zh_CN: 今天
+  zh_TW: 今天
+  ja: 今日
+  ko: 오늘
+  de: Heute
+  fr: Aujourd'hui
+  es: Hoy
+Yesterday:
+  zh_CN: 昨天
+  zh_TW: 昨天
+  ja: 昨日
+  ko: 어제
+  de: Gestern
+  fr: Hier
+  es: Ayer
+Daily:
+  zh_CN: 每日
+  zh_TW: 每日
+  ja: 日次
+  ko: 일간
+  de: Täglich
+  fr: Quotidien
+  es: Diario
+Weekly:
+  zh_CN: 每周
+  zh_TW: 每週
+  ja: 週次
+  ko: 주간
+  de: Wöchentlich
+  fr: Hebdomadaire
+  es: Semanal
+Monthly:
+  zh_CN: 每月
+  zh_TW: 每月
+  ja: 月次
+  ko: 월간
+  de: Monatlich
+  fr: Mensuel
+  es: Mensual
+Quarterly:
+  zh_CN: 季度
+  zh_TW: 季度
+  ja: 四半期
+  ko: 분기
+  de: Quartalsweise
+  fr: Trimestriel
+  es: Trimestral
+Annual:
+  zh_CN: 年度
+  zh_TW: 年度
+  ja: 年次
+  ko: 연간
+  de: Jährlich
+  fr: Annuel
+  es: Anual
+
+# --- Status & misc ---
+
+Loading...:
+  zh_CN: 加载中…
+  zh_TW: 載入中…
+  ja: 読み込み中…
+  ko: 로딩 중…
+  de: Wird geladen…
+  fr: Chargement…
+  es: Cargando…
+No results found:
+  zh_CN: 未找到结果
+  zh_TW: 找不到結果
+  ja: 結果が見つかりません
+  ko: 결과가 없습니다
+  de: Keine Ergebnisse gefunden
+  fr: Aucun résultat trouvé
+  es: No se encontraron resultados
+No data available:
+  zh_CN: 暂无数据
+  zh_TW: 暫無數據
+  ja: データがありません
+  ko: 데이터가 없습니다
+  de: Keine Daten verfügbar
+  fr: Aucune donnée disponible
+  es: No hay datos disponibles
+Learn More:
+  zh_CN: 了解更多
+  zh_TW: 瞭解更多
+  ja: 詳細を見る
+  ko: 자세히 알아보기
+  de: Mehr erfahren
+  fr: En savoir plus
+  es: Más información
+View All:
+  zh_CN: 查看全部
+  zh_TW: 檢視全部
+  ja: すべて表示
+  ko: 전체 보기
+  de: Alle anzeigen
+  fr: Tout afficher
+  es: Ver todo
+Show More:
+  zh_CN: 显示更多
+  zh_TW: 顯示更多
+  ja: もっと見る
+  ko: 더 보기
+  de: Mehr anzeigen
+  fr: Afficher plus
+  es: Mostrar más
+Show Less:
+  zh_CN: 收起
+  zh_TW: 收起
+  ja: 表示を減らす
+  ko: 접기
+  de: Weniger anzeigen
+  fr: Afficher moins
+  es: Mostrar menos
+All:
+  zh_CN: 全部
+  zh_TW: 全部
+  ja: すべて
+  ko: 전체
+  de: Alle
+  fr: Tous
+  es: Todos
+Recent:
+  zh_CN: 最近
+  zh_TW: 最近
+  ja: 最近
+  ko: 최근
+  de: Zuletzt verwendet
+  fr: Récents
+  es: Recientes
+Favorites:
+  zh_CN: 收藏
+  zh_TW: 收藏
+  ja: お気に入り
+  ko: 즐겨찾기
+  de: Favoriten
+  fr: Favoris
+  es: Favoritos
+Top Gainers:
+  zh_CN: 领涨榜
+  zh_TW: 領漲榜
+  ja: 値上がり率上位
+  ko: 상승률 상위
+  de: Top-Gewinner
+  fr: Meilleures hausses
+  es: Mayores subidas
+Top Losers:
+  zh_CN: 领跌榜
+  zh_TW: 領跌榜
+  ja: 値下がり率上位
+  ko: 하락률 상위
+  de: Top-Verlierer
+  fr: Plus fortes baisses
+  es: Mayores bajadas
+Most Active:
+  zh_CN: 成交活跃
+  zh_TW: 成交活躍
+  ja: 売買代金上位
+  ko: 거래량 상위
+  de: Meistgehandelt
+  fr: Les plus actifs
+  es: Más activos
+Gainers:
+  zh_CN: 上涨
+  zh_TW: 上漲
+  ja: 値上がり
+  ko: 상승
+  de: Gewinner
+  fr: Hausses
+  es: Subidas
+Losers:
+  zh_CN: 下跌
+  zh_TW: 下跌
+  ja: 値下がり
+  ko: 하락
+  de: Verlierer
+  fr: Baisses
+  es: Bajadas
+Market Movers:
+  zh_CN: 市场异动
+  zh_TW: 市場異動
+  ja: マーケットムーバー
+  ko: 시장 급등락
+  de: Marktbeweger
+  fr: Valeurs en mouvement
+  es: Valores en movimiento
+Pre-Market:
+  zh_CN: 盘前
+  zh_TW: 盤前
+  ja: プレマーケット
+  ko: 장전
+  de: Vorbörslich
+  fr: Avant-bourse
+  es: Premercado
+After Hours:
+  zh_CN: 盘后
+  zh_TW: 盤後
+  ja: 時間外
+  ko: 장후
+  de: Nachbörslich
+  fr: Après-bourse
+  es: Fuera de horario
+Market Open:
+  zh_CN: 开市
+  zh_TW: 開市
+  ja: 取引時間中
+  ko: 장 개장
+  de: Markt geöffnet
+  fr: Marché ouvert
+  es: Mercado abierto
+Market Closed:
+  zh_CN: 休市
+  zh_TW: 休市
+  ja: 取引終了
+  ko: 장 마감
+  de: Markt geschlossen
+  fr: Marché fermé
+  es: Mercado cerrado
+
+# --- From scope recon 2026-07 (nav, toolbar, dialogs) ---
+
+Analyst Estimates:
+  zh_CN: 分析师预测
+  zh_TW: 分析師預測
+  ja: アナリスト予想
+  ko: 애널리스트 전망
+  de: Analystenschätzungen
+  fr: Estimations des analystes
+  es: Estimaciones de analistas
+News, Filings & Transcripts:
+  zh_CN: 新闻、公告与会议记录
+  zh_TW: 新聞、公告與會議記錄
+  ja: ニュース・開示・議事録
+  ko: 뉴스·공시·기록
+  de: Nachrichten, Einreichungen & Transkripte
+  fr: Actualités, dépôts et transcriptions
+  es: Noticias, presentaciones y transcripciones
+Graphs:
+  zh_CN: 图表
+  zh_TW: 圖表
+  ja: グラフ
+  ko: 그래프
+  de: Graphen
+  fr: Graphiques
+  es: Gráficas
+Calendars:
+  zh_CN: 日历
+  zh_TW: 日曆
+  ja: カレンダー
+  ko: 캘린더
+  de: Kalender
+  fr: Calendriers
+  es: Calendarios
+My Portfolio:
+  zh_CN: 我的投资组合
+  zh_TW: 我的投資組合
+  ja: マイポートフォリオ
+  ko: 내 포트폴리오
+  de: Mein Portfolio
+  fr: Mon portefeuille
+  es: Mi cartera
+My Graphs:
+  zh_CN: 我的图表
+  zh_TW: 我的圖表
+  ja: マイグラフ
+  ko: 내 그래프
+  de: Meine Graphen
+  fr: Mes graphiques
+  es: Mis gráficas
+Security Analysis:
+  zh_CN: 证券分析
+  zh_TW: 證券分析
+  ja: 証券分析
+  ko: 증권 분석
+  de: Wertpapieranalyse
+  fr: Analyse de titres
+  es: Análisis de valores
+My Koyfin:
+  zh_CN: 我的 Koyfin
+  zh_TW: 我的 Koyfin
+  ja: マイKoyfin
+  ko: 내 Koyfin
+  de: Mein Koyfin
+  fr: Mon Koyfin
+  es: Mi Koyfin
+Market Overview:
+  zh_CN: 市场概览
+  zh_TW: 市場概覽
+  ja: 市場概況
+  ko: 시장 개요
+  de: Marktübersicht
+  fr: Aperçu du marché
+  es: Panorama del mercado
+Research Tools:
+  zh_CN: 研究工具
+  zh_TW: 研究工具
+  ja: リサーチツール
+  ko: 리서치 도구
+  de: Research-Tools
+  fr: Outils de recherche
+  es: Herramientas de investigación
+Advisor Tools:
+  zh_CN: 顾问工具
+  zh_TW: 顧問工具
+  ja: アドバイザーツール
+  ko: 어드바이저 도구
+  de: Berater-Tools
+  fr: Outils de conseiller
+  es: Herramientas de asesor
+Historical:
+  zh_CN: 历史数据
+  zh_TW: 歷史數據
+  ja: ヒストリカル
+  ko: 과거 데이터
+  de: Historisch
+  fr: Historique
+  es: Histórico
+Import View:
+  zh_CN: 导入视图
+  zh_TW: 匯入檢視
+  ja: ビューをインポート
+  ko: 보기 가져오기
+  de: Ansicht importieren
+  fr: Importer la vue
+  es: Importar vista
+Columns:
+  zh_CN: 列
+  zh_TW: 欄位
+  ja: 列
+  ko: 열
+  de: Spalten
+  fr: Colonnes
+  es: Columnas
+Group:
+  zh_CN: 分组
+  zh_TW: 分組
+  ja: グループ
+  ko: 그룹
+  de: Gruppieren
+  fr: Grouper
+  es: Agrupar
+Auto:
+  zh_CN: 自动
+  zh_TW: 自動
+  ja: 自動
+  ko: 자동
+  de: Auto
+  fr: Auto
+  es: Auto
+Save as watchlist:
+  zh_CN: 保存为自选列表
+  zh_TW: 儲存為自選清單
+  ja: ウォッチリストとして保存
+  ko: 관심 목록으로 저장
+  de: Als Watchlist speichern
+  fr: Enregistrer comme liste de surveillance
+  es: Guardar como lista de seguimiento
+Hide Criteria:
+  zh_CN: 隐藏筛选条件
+  zh_TW: 隱藏篩選條件
+  ja: 条件を隠す
+  ko: 조건 숨기기
+  de: Kriterien ausblenden
+  fr: Masquer les critères
+  es: Ocultar criterios
+Modify Criteria:
+  zh_CN: 修改筛选条件
+  zh_TW: 修改篩選條件
+  ja: 条件を編集
+  ko: 조건 수정
+  de: Kriterien bearbeiten
+  fr: Modifier les critères
+  es: Modificar criterios
+Universe Criteria:
+  zh_CN: 股票池条件
+  zh_TW: 股票池條件
+  ja: ユニバース条件
+  ko: 유니버스 조건
+  de: Universum-Kriterien
+  fr: Critères d'univers
+  es: Criterios de universo
+Filter Criteria:
+  zh_CN: 筛选条件
+  zh_TW: 篩選條件
+  ja: フィルター条件
+  ko: 필터 조건
+  de: Filterkriterien
+  fr: Critères de filtre
+  es: Criterios de filtro
+Quick Actions:
+  zh_CN: 快捷操作
+  zh_TW: 快捷操作
+  ja: クイックアクション
+  ko: 빠른 작업
+  de: Schnellaktionen
+  fr: Actions rapides
+  es: Acciones rápidas
+My Alerts:
+  zh_CN: 我的提醒
+  zh_TW: 我的提醒
+  ja: マイアラート
+  ko: 내 알림
+  de: Meine Alarme
+  fr: Mes alertes
+  es: Mis alertas
+My Notes:
+  zh_CN: 我的笔记
+  zh_TW: 我的筆記
+  ja: マイノート
+  ko: 내 메모
+  de: Meine Notizen
+  fr: Mes notes
+  es: Mis notas
+In My Watchlists:
+  zh_CN: 已在我的自选中
+  zh_TW: 已在我的自選中
+  ja: ウォッチリスト登録済み
+  ko: 내 관심 목록에 있음
+  de: In meinen Watchlists
+  fr: Dans mes listes de surveillance
+  es: En mis listas de seguimiento
+Add Ticker:
+  zh_CN: 添加代码
+  zh_TW: 新增代碼
+  ja: ティッカーを追加
+  ko: 티커 추가
+  de: Ticker hinzufügen
+  fr: Ajouter un ticker
+  es: Añadir ticker
+New Group:
+  zh_CN: 新建分组
+  zh_TW: 新增分組
+  ja: 新しいグループ
+  ko: 새 그룹
+  de: Neue Gruppe
+  fr: Nouveau groupe
+  es: Nuevo grupo
+Show Table:
+  zh_CN: 显示表格
+  zh_TW: 顯示表格
+  ja: テーブルを表示
+  ko: 표 표시
+  de: Tabelle anzeigen
+  fr: Afficher le tableau
+  es: Mostrar tabla
+Add to My Graphs:
+  zh_CN: 添加到我的图表
+  zh_TW: 加入我的圖表
+  ja: マイグラフに追加
+  ko: 내 그래프에 추가
+  de: Zu meinen Graphen hinzufügen
+  fr: Ajouter à mes graphiques
+  es: Añadir a mis gráficas
+Add Metric:
+  zh_CN: 添加指标
+  zh_TW: 新增指標
+  ja: 指標を追加
+  ko: 지표 추가
+  de: Kennzahl hinzufügen
+  fr: Ajouter une métrique
+  es: Añadir métrica
+Add Security to Watchlist:
+  zh_CN: 添加证券到自选列表
+  zh_TW: 新增證券至自選清單
+  ja: 銘柄をウォッチリストに追加
+  ko: 종목을 관심 목록에 추가
+  de: Wertpapier zur Watchlist hinzufügen
+  fr: Ajouter un titre à la liste
+  es: Añadir valor a la lista
+Save As:
+  zh_CN: 另存为
+  zh_TW: 另存為
+  ja: 名前を付けて保存
+  ko: 다른 이름으로 저장
+  de: Speichern unter
+  fr: Enregistrer sous
+  es: Guardar como
+Templates:
+  zh_CN: 模板
+  zh_TW: 範本
+  ja: テンプレート
+  ko: 템플릿
+  de: Vorlagen
+  fr: Modèles
+  es: Plantillas
+Selections:
+  zh_CN: 选择项
+  zh_TW: 選擇項
+  ja: 選択項目
+  ko: 선택 항목
+  de: Auswahl
+  fr: Sélections
+  es: Selecciones
+Next Earnings Date:
+  zh_CN: 下次财报日期
+  zh_TW: 下次財報日期
+  ja: 次回決算日
+  ko: 다음 실적 발표일
+  de: Nächster Ergebnistermin
+  fr: Prochaine date de résultats
+  es: Próxima fecha de resultados
+Forward P/E:
+  zh_CN: 预期市盈率
+  zh_TW: 預期本益比
+  ja: 予想PER
+  ko: 선행 PER
+  de: Erwartetes KGV
+  fr: PER prévisionnel
+  es: PER adelantado
+Trading Region:
+  zh_CN: 交易地区
+  zh_TW: 交易地區
+  ja: 取引地域
+  ko: 거래 지역
+  de: Handelsregion
+  fr: Région de négociation
+  es: Región de negociación
+Category:
+  zh_CN: 类别
+  zh_TW: 類別
+  ja: カテゴリー
+  ko: 카테고리
+  de: Kategorie
+  fr: Catégorie
+  es: Categoría
+Security:
+  zh_CN: 证券
+  zh_TW: 證券
+  ja: 銘柄
+  ko: 증권
+  de: Wertpapier
+  fr: Titre
+  es: Valor
+Last:
+  zh_CN: 最新
+  zh_TW: 最新
+  ja: 直近
+  ko: 최근
+  de: Letzter
+  fr: Dernier
+  es: Último
+Get Started:
+  zh_CN: 开始使用
+  zh_TW: 開始使用
+  ja: はじめる
+  ko: 시작하기
+  de: Loslegen
+  fr: Commencer
+  es: Empezar
+Skip to main content:
+  zh_CN: 跳转到主内容
+  zh_TW: 跳至主要內容
+  ja: メインコンテンツへスキップ
+  ko: 본문으로 건너뛰기
+  de: Zum Hauptinhalt springen
+  fr: Aller au contenu principal
+  es: Saltar al contenido principal
+Search for a name, ticker, or function:
+  zh_CN: 搜索名称、代码或功能
+  zh_TW: 搜尋名稱、代碼或功能
+  ja: 名前・ティッカー・機能を検索
+  ko: 이름, 티커 또는 기능 검색
+  de: Name, Ticker oder Funktion suchen
+  fr: Rechercher un nom, un ticker ou une fonction
+  es: Buscar nombre, ticker o función
+Manage Watchlists:
+  zh_CN: 管理自选列表
+  zh_TW: 管理自選清單
+  ja: ウォッチリストを管理
+  ko: 관심 목록 관리
+  de: Watchlists verwalten
+  fr: Gérer les listes de surveillance
+  es: Gestionar listas de seguimiento
+Accept All:
+  zh_CN: 全部接受
+  zh_TW: 全部接受
+  ja: すべて同意
+  ko: 모두 수락
+  de: Alle akzeptieren
+  fr: Tout accepter
+  es: Aceptar todo
+Reject:
+  zh_CN: 拒绝
+  zh_TW: 拒絕
+  ja: 拒否
+  ko: 거부
+  de: Ablehnen
+  fr: Refuser
+  es: Rechazar
+Customize:
+  zh_CN: 自定义
+  zh_TW: 自訂
+  ja: カスタマイズ
+  ko: 사용자 지정
+  de: Anpassen
+  fr: Personnaliser
+  es: Personalizar
+
+# --- Built-in dashboard names ---
+
+Lots of Charts:
+  zh_CN: 多图表
+  zh_TW: 多圖表
+  ja: チャート一覧
+  ko: 차트 모음
+  de: Viele Charts
+  fr: Multi-graphiques
+  es: Múltiples gráficas
+Market Scatter:
+  zh_CN: 市场散点图
+  zh_TW: 市場散點圖
+  ja: マーケット散布図
+  ko: 시장 산점도
+  de: Markt-Streudiagramm
+  fr: Nuage de points de marché
+  es: Dispersión de mercado
+Client Portfolios:
+  zh_CN: 客户投资组合
+  zh_TW: 客戶投資組合
+  ja: 顧客ポートフォリオ
+  ko: 고객 포트폴리오
+  de: Kundenportfolios
+  fr: Portefeuilles clients
+  es: Carteras de clientes
+Model Portfolios:
+  zh_CN: 模型投资组合
+  zh_TW: 模型投資組合
+  ja: モデルポートフォリオ
+  ko: 모델 포트폴리오
+  de: Modellportfolios
+  fr: Portefeuilles modèles
+  es: Carteras modelo
+Reports:
+  zh_CN: 报告
+  zh_TW: 報告
+  ja: レポート
+  ko: 보고서
+  de: Berichte
+  fr: Rapports
+  es: Informes
+
+# --- Long feature blurbs ---
+
+My Screens helps you find the right stocks by offering global coverage, extensive data filters, and the ability to combine multiple custom criteria to pinpoint exactly what you need.:
+  zh_CN: 「我的筛选」提供全球市场覆盖和丰富的数据筛选条件，并支持组合多个自定义条件，帮你精准找到所需的股票。
+  zh_TW: 「我的篩選」提供全球市場覆蓋和豐富的數據篩選條件，並支援組合多個自訂條件，幫你精準找到所需的股票。
+  ja: マイスクリーンは、グローバルなカバレッジ、豊富なデータフィルター、複数のカスタム条件の組み合わせにより、最適な銘柄探しをサポートします。
+  ko: 내 스크린은 글로벌 커버리지, 다양한 데이터 필터, 여러 사용자 지정 조건의 조합을 통해 원하는 종목을 정확히 찾도록 도와줍니다.
+  de: Meine Screens hilft Ihnen, die richtigen Aktien zu finden – mit globaler Abdeckung, umfangreichen Datenfiltern und der Kombination mehrerer eigener Kriterien.
+  fr: Mes filtres vous aident à trouver les bonnes actions grâce à une couverture mondiale, des filtres de données étendus et la combinaison de plusieurs critères personnalisés.
+  es: Mis filtros le ayuda a encontrar las acciones adecuadas con cobertura global, filtros de datos completos y la combinación de múltiples criterios personalizados.
+
+# --- Sidebar research pages (audit 2026-07-11) ---
+
+Advanced Search:
+  zh_CN: 高级搜索
+  zh_TW: 進階搜尋
+  ja: 高度な検索
+  ko: 고급 검색
+  de: Erweiterte Suche
+  fr: Recherche avancée
+  es: Búsqueda avanzada
+Security Search:
+  zh_CN: 证券搜索
+  zh_TW: 證券搜尋
+  ja: 銘柄検索
+  ko: 종목 검색
+  de: Wertpapiersuche
+  fr: Recherche de titres
+  es: Búsqueda de valores
+Transcripts Search:
+  zh_CN: 会议记录搜索
+  zh_TW: 會議記錄搜尋
+  ja: 議事録検索
+  ko: 기록 검색
+  de: Transkript-Suche
+  fr: Recherche de transcriptions
+  es: Búsqueda de transcripciones
+Percentile Rank:
+  zh_CN: 百分位排名
+  zh_TW: 百分位排名
+  ja: パーセンタイルランク
+  ko: 백분위 순위
+  de: Perzentil-Rang
+  fr: Rang centile
+  es: Rango percentil
+Dividend:
+  zh_CN: 股息
+  zh_TW: 股息
+  ja: 配当
+  ko: 배당
+  de: Dividende
+  fr: Dividende
+  es: Dividendo
+Earnings History:
+  zh_CN: 财报历史
+  zh_TW: 財報歷史
+  ja: 決算履歴
+  ko: 실적 이력
+  de: Ergebnishistorie
+  fr: Historique des résultats
+  es: Historial de resultados
+Actuals and Consensus:
+  zh_CN: 实际与一致预期
+  zh_TW: 實際與一致預期
+  ja: 実績とコンセンサス
+  ko: 실적 및 컨센서스
+  de: Ist-Werte und Konsens
+  fr: Réalisé et consensus
+  es: Datos reales y consenso
+Price Target:
+  zh_CN: 目标价
+  zh_TW: 目標價
+  ja: 目標株価
+  ko: 목표 주가
+  de: Kursziel
+  fr: Objectif de cours
+  es: Precio objetivo
+Estimates Overview:
+  zh_CN: 预测概览
+  zh_TW: 預測概覽
+  ja: 業績予想の概要
+  ko: 전망 개요
+  de: Schätzungsübersicht
+  fr: Aperçu des estimations
+  es: Resumen de estimaciones
+Estimates Trends:
+  zh_CN: 预测趋势
+  zh_TW: 預測趨勢
+  ja: 業績予想の推移
+  ko: 전망 추이
+  de: Schätzungstrends
+  fr: Tendances des estimations
+  es: Tendencias de estimaciones
+Cash Flow:
+  zh_CN: 现金流
+  zh_TW: 現金流
+  ja: キャッシュフロー
+  ko: 현금흐름
+  de: Cashflow
+  fr: Flux de trésorerie
+  es: Flujo de caja
+Multiples:
+  zh_CN: 估值倍数
+  zh_TW: 估值倍數
+  ja: マルチプル
+  ko: 멀티플
+  de: Multiplikatoren
+  fr: Multiples
+  es: Múltiplos
+Enterprise Value:
+  zh_CN: 企业价值
+  zh_TW: 企業價值
+  ja: 企業価値
+  ko: 기업 가치
+  de: Unternehmenswert
+  fr: Valeur d'entreprise
+  es: Valor de empresa
+Profitability:
+  zh_CN: 盈利能力
+  zh_TW: 盈利能力
+  ja: 収益性
+  ko: 수익성
+  de: Rentabilität
+  fr: Rentabilité
+  es: Rentabilidad
+Solvency:
+  zh_CN: 偿债能力
+  zh_TW: 償債能力
+  ja: 支払能力
+  ko: 지급 능력
+  de: Solvenz
+  fr: Solvabilité
+  es: Solvencia
+Press Releases:
+  zh_CN: 新闻稿
+  zh_TW: 新聞稿
+  ja: プレスリリース
+  ko: 보도 자료
+  de: Pressemitteilungen
+  fr: Communiqués de presse
+  es: Comunicados de prensa
+Comparison:
+  zh_CN: 对比
+  zh_TW: 比較
+  ja: 比較
+  ko: 비교
+  de: Vergleich
+  fr: Comparaison
+  es: Comparación
+Intraday:
+  zh_CN: 盘中
+  zh_TW: 盤中
+  ja: 日中
+  ko: 장중
+  de: Intraday
+  fr: Intrajournalier
+  es: Intradía
+Sample Dashboard:
+  zh_CN: 示例仪表盘
+  zh_TW: 範例儀表板
+  ja: サンプルダッシュボード
+  ko: 샘플 대시보드
+  de: Beispiel-Dashboard
+  fr: Tableau de bord exemple
+  es: Panel de ejemplo
+World Equity Indices:
+  zh_CN: 全球股票指数
+  zh_TW: 全球股票指數
+  ja: 世界株価指数
+  ko: 글로벌 주가지수
+  de: Weltweite Aktienindizes
+  fr: Indices boursiers mondiaux
+  es: Índices bursátiles mundiales
+US Sectors:
+  zh_CN: 美国行业板块
+  zh_TW: 美國行業板塊
+  ja: 米国セクター
+  ko: 미국 섹터
+  de: US-Sektoren
+  fr: Secteurs américains
+  es: Sectores de EE. UU.
+Countries:
+  zh_CN: 国家
+  zh_TW: 國家
+  ja: 国別
+  ko: 국가별
+  de: Länder
+  fr: Pays
+  es: Países
+Recent IPOs:
+  zh_CN: 近期IPO
+  zh_TW: 近期IPO
+  ja: 最近のIPO
+  ko: 최근 IPO
+  de: Jüngste IPOs
+  fr: Introductions en bourse récentes
+  es: OPI recientes
+World Economics:
+  zh_CN: 全球经济
+  zh_TW: 全球經濟
+  ja: 世界経済
+  ko: 세계 경제
+  de: Weltwirtschaft
+  fr: Économie mondiale
+  es: Economía mundial
+Global Yields:
+  zh_CN: 全球收益率
+  zh_TW: 全球收益率
+  ja: 世界の利回り
+  ko: 글로벌 금리
+  de: Globale Renditen
+  fr: Rendements mondiaux
+  es: Rendimientos globales
+Corporate Credit:
+  zh_CN: 企业信用债
+  zh_TW: 企業信用債
+  ja: 社債
+  ko: 회사채
+  de: Unternehmensanleihen
+  fr: Crédit aux entreprises
+  es: Crédito corporativo
+Yield Spreads:
+  zh_CN: 收益率利差
+  zh_TW: 收益率利差
+  ja: 利回りスプレッド
+  ko: 금리 스프레드
+  de: Renditespreads
+  fr: Écarts de rendement
+  es: Diferenciales de rendimiento
+Yield Curve:
+  zh_CN: 收益率曲线
+  zh_TW: 收益率曲線
+  ja: イールドカーブ
+  ko: 수익률 곡선
+  de: Zinsstrukturkurve
+  fr: Courbe des taux
+  es: Curva de rendimientos
+Factor Analysis:
+  zh_CN: 因子分析
+  zh_TW: 因子分析
+  ja: ファクター分析
+  ko: 팩터 분석
+  de: Faktoranalyse
+  fr: Analyse factorielle
+  es: Análisis de factores
+Fixed Income Factors:
+  zh_CN: 固定收益因子
+  zh_TW: 固定收益因子
+  ja: 債券ファクター
+  ko: 채권 팩터
+  de: Anleihen-Faktoren
+  fr: Facteurs obligataires
+  es: Factores de renta fija
+
+# --- Walkthrough dialog & page tabs (audit 2026-07-11) ---
+
+Learn more about My Screens:
+  zh_CN: 了解更多关于我的筛选
+  zh_TW: 瞭解更多關於我的篩選
+  ja: マイスクリーンの詳細
+  ko: 내 스크린 자세히 알아보기
+  de: Mehr über Meine Screens erfahren
+  fr: En savoir plus sur Mes filtres
+  es: Más información sobre Mis filtros
+"Next: My Watchlists":
+  zh_CN: 下一步：我的自选
+  zh_TW: 下一步：我的自選
+  ja: 次へ：マイウォッチリスト
+  ko: "다음: 내 관심 목록"
+  de: "Weiter: Meine Watchlists"
+  fr: "Suivant : Mes listes de surveillance"
+  es: "Siguiente: Mis listas de seguimiento"
+Exit walkthrough:
+  zh_CN: 退出引导
+  zh_TW: 退出導覽
+  ja: チュートリアルを終了
+  ko: 둘러보기 종료
+  de: Rundgang beenden
+  fr: Quitter la visite guidée
+  es: Salir del recorrido
+Stock Screener:
+  zh_CN: 股票筛选器
+  zh_TW: 股票篩選器
+  ja: 株式スクリーナー
+  ko: 주식 스크리너
+  de: Aktien-Screener
+  fr: Filtre d'actions
+  es: Filtro de acciones
+ETFs and MFs:
+  zh_CN: ETF与共同基金
+  zh_TW: ETF與共同基金
+  ja: ETFと投資信託
+  ko: ETF·펀드
+  de: ETFs & Fonds
+  fr: ETF et fonds communs
+  es: ETF y fondos
+
+# --- Tooltips & aria labels (audit 2026-07-11) ---
+
+Column selection:
+  zh_CN: 选择列
+  zh_TW: 選擇欄位
+  ja: 列の選択
+  ko: 열 선택
+  de: Spaltenauswahl
+  fr: Sélection des colonnes
+  es: Selección de columnas
+Summary dropdown:
+  zh_CN: 汇总下拉菜单
+  zh_TW: 彙總下拉選單
+  ja: サマリーのドロップダウン
+  ko: 요약 드롭다운
+  de: Zusammenfassungs-Dropdown
+  fr: Menu déroulant de résumé
+  es: Menú de resumen
+Sort dropdown:
+  zh_CN: 排序下拉菜单
+  zh_TW: 排序下拉選單
+  ja: 並べ替えのドロップダウン
+  ko: 정렬 드롭다운
+  de: Sortier-Dropdown
+  fr: Menu déroulant de tri
+  es: Menú de ordenación
+Group dropdown:
+  zh_CN: 分组下拉菜单
+  zh_TW: 分組下拉選單
+  ja: グループのドロップダウン
+  ko: 그룹 드롭다운
+  de: Gruppierungs-Dropdown
+  fr: Menu déroulant de groupe
+  es: Menú de agrupación
+Currency dropdown:
+  zh_CN: 货币下拉菜单
+  zh_TW: 貨幣下拉選單
+  ja: 通貨のドロップダウン
+  ko: 통화 드롭다운
+  de: Währungs-Dropdown
+  fr: Menu déroulant de devise
+  es: Menú de divisa
+Table views dropdown:
+  zh_CN: 表格视图下拉菜单
+  zh_TW: 表格檢視下拉選單
+  ja: テーブルビューのドロップダウン
+  ko: 표 보기 드롭다운
+  de: Tabellenansichten-Dropdown
+  fr: Menu déroulant des vues de tableau
+  es: Menú de vistas de tabla
+Create new screen:
+  zh_CN: 新建筛选
+  zh_TW: 新增篩選
+  ja: 新しいスクリーンを作成
+  ko: 새 스크린 만들기
+  de: Neuen Screen erstellen
+  fr: Créer un nouveau filtre
+  es: Crear nuevo filtro
+Create new watchlist:
+  zh_CN: 新建自选列表
+  zh_TW: 新增自選清單
+  ja: 新しいウォッチリストを作成
+  ko: 새 관심 목록 만들기
+  de: Neue Watchlist erstellen
+  fr: Créer une nouvelle liste de surveillance
+  es: Crear nueva lista de seguimiento
+Context menu:
+  zh_CN: 上下文菜单
+  zh_TW: 內容選單
+  ja: コンテキストメニュー
+  ko: 컨텍스트 메뉴
+  de: Kontextmenü
+  fr: Menu contextuel
+  es: Menú contextual
+Search filter:
+  zh_CN: 搜索筛选
+  zh_TW: 搜尋篩選
+  ja: 検索フィルター
+  ko: 검색 필터
+  de: Suchfilter
+  fr: Filtre de recherche
+  es: Filtro de búsqueda
+Select all tickers:
+  zh_CN: 全选代码
+  zh_TW: 全選代碼
+  ja: すべてのティッカーを選択
+  ko: 모든 티커 선택
+  de: Alle Ticker auswählen
+  fr: Sélectionner tous les tickers
+  es: Seleccionar todos los tickers
+Main navigation:
+  zh_CN: 主导航
+  zh_TW: 主導覽
+  ja: メインナビゲーション
+  ko: 주 탐색
+  de: Hauptnavigation
+  fr: Navigation principale
+  es: Navegación principal
+Edit dashboard:
+  zh_CN: 编辑仪表盘
+  zh_TW: 編輯儀表板
+  ja: ダッシュボードを編集
+  ko: 대시보드 편집
+  de: Dashboard bearbeiten
+  fr: Modifier le tableau de bord
+  es: Editar panel
+Delete dashboard:
+  zh_CN: 删除仪表盘
+  zh_TW: 刪除儀表板
+  ja: ダッシュボードを削除
+  ko: 대시보드 삭제
+  de: Dashboard löschen
+  fr: Supprimer le tableau de bord
+  es: Eliminar panel
+
+# --- Subscription upsell tooltips (audit 2026-07-11) ---
+
+Please upgrade your account to view this data:
+  zh_CN: 请升级账户以查看该数据
+  zh_TW: 請升級帳戶以檢視該數據
+  ja: このデータを表示するにはアカウントをアップグレードしてください
+  ko: 이 데이터를 보려면 계정을 업그레이드하세요
+  de: Bitte upgraden Sie Ihr Konto, um diese Daten zu sehen
+  fr: Veuillez mettre à niveau votre compte pour voir ces données
+  es: Actualice su cuenta para ver estos datos
+A plus subscription is required to access this data.:
+  zh_CN: 访问该数据需要 Plus 订阅。
+  zh_TW: 存取該數據需要 Plus 訂閱。
+  ja: このデータへのアクセスにはPlusプランが必要です。
+  ko: 이 데이터에 접근하려면 Plus 구독이 필요합니다.
+  de: Für den Zugriff auf diese Daten ist ein Plus-Abo erforderlich.
+  fr: Un abonnement Plus est requis pour accéder à ces données.
+  es: Se requiere una suscripción Plus para acceder a estos datos.
+An advisor core subscription is required to access this key.:
+  zh_CN: 访问该指标需要 Advisor Core 订阅。
+  zh_TW: 存取該指標需要 Advisor Core 訂閱。
+  ja: このキーへのアクセスにはAdvisor Coreプランが必要です。
+  ko: 이 키에 접근하려면 Advisor Core 구독이 필요합니다.
+  de: Für den Zugriff auf diesen Wert ist ein Advisor-Core-Abo erforderlich.
+  fr: Un abonnement Advisor Core est requis pour accéder à cette donnée.
+  es: Se requiere una suscripción Advisor Core para acceder a esta clave.
+
+# --- Walkthrough steps (recon 2026-07-11) ---
+
+Previous:
+  zh_CN: 上一步
+  zh_TW: 上一步
+  ja: 前へ
+  ko: 이전
+  de: Zurück
+  fr: Précédent
+  es: Anterior
+Finish:
+  zh_CN: 完成
+  zh_TW: 完成
+  ja: 完了
+  ko: 마침
+  de: Fertigstellen
+  fr: Terminer
+  es: Finalizar
+"Next: Financial Analysis":
+  zh_CN: 下一步：财务分析
+  zh_TW: 下一步：財務分析
+  ja: 次へ：財務分析
+  ko: "다음: 재무 분석"
+  de: "Weiter: Finanzanalyse"
+  fr: "Suivant : Analyse financière"
+  es: "Siguiente: Análisis financiero"
+"Next: My Portfolio":
+  zh_CN: 下一步：我的投资组合
+  zh_TW: 下一步：我的投資組合
+  ja: 次へ：マイポートフォリオ
+  ko: "다음: 내 포트폴리오"
+  de: "Weiter: Mein Portfolio"
+  fr: "Suivant : Mon portefeuille"
+  es: "Siguiente: Mi cartera"
+Learn more about My Watchlists:
+  zh_CN: 了解更多关于我的自选
+  zh_TW: 瞭解更多關於我的自選
+  ja: マイウォッチリストの詳細
+  ko: 내 관심 목록 자세히 알아보기
+  de: Mehr über Meine Watchlists erfahren
+  fr: En savoir plus sur Mes listes de surveillance
+  es: Más información sobre Mis listas de seguimiento
+Learn more about Financial Analysis:
+  zh_CN: 了解更多关于财务分析
+  zh_TW: 瞭解更多關於財務分析
+  ja: 財務分析の詳細
+  ko: 재무 분석 자세히 알아보기
+  de: Mehr über die Finanzanalyse erfahren
+  fr: En savoir plus sur l'Analyse financière
+  es: Más información sobre Análisis financiero
+Learn more about My Portfolio:
+  zh_CN: 了解更多关于我的投资组合
+  zh_TW: 瞭解更多關於我的投資組合
+  ja: マイポートフォリオの詳細
+  ko: 내 포트폴리오 자세히 알아보기
+  de: Mehr über Mein Portfolio erfahren
+  fr: En savoir plus sur Mon portefeuille
+  es: Más información sobre Mi cartera
+My Watchlists allow you to track and organize specific stocks, ETFs, or other securities you're interested in, enabling quick access to key data and performance metrics.:
+  zh_CN: 「我的自选」帮你跟踪和整理感兴趣的股票、ETF 或其他证券，快速查看关键数据和表现指标。
+  zh_TW: 「我的自選」幫你追蹤和整理感興趣的股票、ETF 或其他證券，快速檢視關鍵數據和表現指標。
+  ja: マイウォッチリストでは、関心のある株式・ETF・その他の銘柄を整理して追跡し、主要データやパフォーマンス指標にすばやくアクセスできます。
+  ko: 내 관심 목록은 관심 있는 주식, ETF 및 기타 종목을 추적·정리하여 주요 데이터와 성과 지표에 빠르게 접근할 수 있게 해줍니다.
+  de: Mit Meine Watchlists verfolgen und organisieren Sie Aktien, ETFs oder andere Wertpapiere und greifen schnell auf wichtige Daten und Performance-Kennzahlen zu.
+  fr: Mes listes de surveillance vous permettent de suivre et d'organiser des actions, ETF ou autres titres, avec un accès rapide aux données clés et aux indicateurs de performance.
+  es: Mis listas de seguimiento le permiten seguir y organizar acciones, ETF u otros valores, con acceso rápido a datos clave y métricas de rendimiento.
+The Financial Analysis section breaks down traditional financial statement views such as income statement, balance sheet, cash flows, and more. Use the pre-made templates, or create your own custom template with hundreds of data points available.:
+  zh_CN: 「财务分析」板块拆解利润表、资产负债表、现金流量表等传统财务报表视图。你可以使用预置模板，也可以用数百个数据点创建自定义模板。
+  zh_TW: 「財務分析」板塊拆解損益表、資產負債表、現金流量表等傳統財務報表檢視。你可以使用預置範本，也可以用數百個數據點建立自訂範本。
+  ja: 財務分析セクションでは、損益計算書・貸借対照表・キャッシュフローなどの伝統的な財務諸表を分解して表示します。既成のテンプレートを使うことも、数百のデータ項目から独自のテンプレートを作ることもできます。
+  ko: 재무 분석 섹션은 손익계산서, 재무상태표, 현금흐름표 등 전통적인 재무제표 보기를 제공합니다. 기본 제공 템플릿을 사용하거나 수백 개의 데이터 항목으로 나만의 템플릿을 만들 수 있습니다.
+  de: Der Bereich Finanzanalyse gliedert klassische Abschlussansichten wie GuV, Bilanz und Cashflow auf. Nutzen Sie vorgefertigte Vorlagen oder erstellen Sie mit Hunderten von Datenpunkten eigene Vorlagen.
+  fr: "La section Analyse financière décompose les états financiers classiques : compte de résultat, bilan, flux de trésorerie, etc. Utilisez les modèles prédéfinis ou créez vos propres modèles avec des centaines de données disponibles."
+  es: "La sección de Análisis financiero desglosa los estados financieros tradicionales: estado de resultados, balance, flujos de efectivo y más. Use las plantillas predefinidas o cree su propia plantilla con cientos de datos disponibles."
+My Portfolio allows you to track your portfolio in detail with multiple accounts, an aggregated portfolio, individual lots, exposure breakdowns, P/L, and weightings.:
+  zh_CN: 「我的投资组合」帮你精细跟踪投资组合：支持多账户、汇总组合、单笔持仓、敞口拆解、盈亏和权重分析。
+  zh_TW: 「我的投資組合」幫你精細追蹤投資組合：支援多帳戶、彙總組合、單筆持倉、敞口拆解、損益和權重分析。
+  ja: マイポートフォリオでは、複数口座、統合ポートフォリオ、個別ロット、エクスポージャー内訳、損益、ウェイトなど、ポートフォリオを詳細に追跡できます。
+  ko: 내 포트폴리오는 여러 계좌, 통합 포트폴리오, 개별 매수 단위, 노출 분석, 손익, 비중까지 포트폴리오를 상세하게 추적할 수 있게 해줍니다.
+  de: Mit Mein Portfolio verfolgen Sie Ihr Portfolio im Detail – mit mehreren Konten, einem aggregierten Portfolio, einzelnen Positionen, Exposure-Aufschlüsselungen, G&V und Gewichtungen.
+  fr: "Mon portefeuille vous permet de suivre votre portefeuille en détail : comptes multiples, portefeuille agrégé, lots individuels, répartition des expositions, P&L et pondérations."
+  es: "Mi cartera le permite seguir su cartera en detalle: múltiples cuentas, cartera agregada, lotes individuales, desglose de exposición, P/G y ponderaciones."
+
+# --- Watchlist toolbar & fund table (recon 2026-07-11) ---
+
+Duplicate Watchlist:
+  zh_CN: 复制自选列表
+  zh_TW: 複製自選清單
+  ja: ウォッチリストを複製
+  ko: 관심 목록 복제
+  de: Watchlist duplizieren
+  fr: Dupliquer la liste de surveillance
+  es: Duplicar lista de seguimiento
+Private to only me:
+  zh_CN: 仅自己可见
+  zh_TW: 僅自己可見
+  ja: 自分のみ表示
+  ko: 나만 보기
+  de: Nur für mich sichtbar
+  fr: Visible par moi seul
+  es: Visible solo para mí
+Download Table:
+  zh_CN: 下载表格
+  zh_TW: 下載表格
+  ja: テーブルをダウンロード
+  ko: 표 다운로드
+  de: Tabelle herunterladen
+  fr: Télécharger le tableau
+  es: Descargar tabla
+Add to My Watchlists:
+  zh_CN: 添加到我的自选
+  zh_TW: 加入我的自選
+  ja: マイウォッチリストに追加
+  ko: 내 관심 목록에 추가
+  de: Zu meinen Watchlists hinzufügen
+  fr: Ajouter à mes listes de surveillance
+  es: Añadir a mis listas de seguimiento
+Quotebox:
+  zh_CN: 报价框
+  zh_TW: 報價框
+  ja: クオートボックス
+  ko: 시세 박스
+  de: Quotebox
+  fr: Encadré de cotation
+  es: Cuadro de cotización
+Create a new group after the Unclassified group:
+  zh_CN: 在“未分类”分组后新建分组
+  zh_TW: 在「未分類」分組後新增分組
+  ja: 未分類グループの後に新しいグループを作成
+  ko: 미분류 그룹 뒤에 새 그룹 만들기
+  de: Neue Gruppe nach der Gruppe „Nicht klassifiziert“ erstellen
+  fr: Créer un nouveau groupe après le groupe Non classé
+  es: Crear un nuevo grupo después del grupo Sin clasificar
+1-Day %:
+  zh_CN: 1日涨跌幅
+  zh_TW: 1日漲跌幅
+  ja: 1日変化率
+  ko: 1일 등락률
+  de: 1-Tages-%
+  fr: "% sur 1 jour"
+  es: "% de 1 día"
+Total Return (3M):
+  zh_CN: 总回报（3个月）
+  zh_TW: 總回報（3個月）
+  ja: トータルリターン（3か月）
+  ko: 총수익률 (3개월)
+  de: Gesamtrendite (3M)
+  fr: Rendement total (3 mois)
+  es: Rentabilidad total (3M)
+Total Return (1Y):
+  zh_CN: 总回报（1年）
+  zh_TW: 總回報（1年）
+  ja: トータルリターン（1年）
+  ko: 총수익률 (1년)
+  de: Gesamtrendite (1J)
+  fr: Rendement total (1 an)
+  es: Rentabilidad total (1A)
+Total Return (3Y):
+  zh_CN: 总回报（3年）
+  zh_TW: 總回報（3年）
+  ja: トータルリターン（3年）
+  ko: 총수익률 (3년)
+  de: Gesamtrendite (3J)
+  fr: Rendement total (3 ans)
+  es: Rentabilidad total (3A)
+Total Return (5Y):
+  zh_CN: 总回报（5年）
+  zh_TW: 總回報（5年）
+  ja: トータルリターン（5年）
+  ko: 총수익률 (5년)
+  de: Gesamtrendite (5J)
+  fr: Rendement total (5 ans)
+  es: Rentabilidad total (5A)
+Net Expense Ratio:
+  zh_CN: 净费用率
+  zh_TW: 淨費用率
+  ja: 実質経費率
+  ko: 순보수율
+  de: Nettokostenquote
+  fr: Ratio de frais nets
+  es: Ratio de gastos netos
+Mgmt Fees:
+  zh_CN: 管理费
+  zh_TW: 管理費
+  ja: 運用管理費
+  ko: 운용 보수
+  de: Verwaltungsgebühren
+  fr: Frais de gestion
+  es: Comisiones de gestión
+Turnover:
+  zh_CN: 换手率
+  zh_TW: 換手率
+  ja: 回転率
+  ko: 회전율
+  de: Umschlagshäufigkeit
+  fr: Taux de rotation
+  es: Rotación
+Classification:
+  zh_CN: 分类
+  zh_TW: 分類
+  ja: 分類
+  ko: 분류
+  de: Klassifizierung
+  fr: Classification
+  es: Clasificación
+Objective:
+  zh_CN: 投资目标
+  zh_TW: 投資目標
+  ja: 運用目標
+  ko: 투자 목표
+  de: Anlageziel
+  fr: Objectif
+  es: Objetivo
+
+# --- My Portfolio page (recon 2026-07-11) ---
+
+Profit/Loss:
+  zh_CN: 盈亏
+  zh_TW: 損益
+  ja: 損益
+  ko: 손익
+  de: Gewinn/Verlust
+  fr: Profits et pertes
+  es: Pérdidas y ganancias
+Exposure:
+  zh_CN: 敞口
+  zh_TW: 敞口
+  ja: エクスポージャー
+  ko: 노출
+  de: Exposure
+  fr: Exposition
+  es: Exposición
+Hypothetical Performance:
+  zh_CN: 模拟表现
+  zh_TW: 模擬表現
+  ja: 仮想パフォーマンス
+  ko: 가상 성과
+  de: Hypothetische Performance
+  fr: Performance hypothétique
+  es: Rendimiento hipotético
+Analysis:
+  zh_CN: 分析
+  zh_TW: 分析
+  ja: 分析
+  ko: 분석
+  de: Analyse
+  fr: Analyse
+  es: Análisis
+Risk:
+  zh_CN: 风险
+  zh_TW: 風險
+  ja: リスク
+  ko: 위험
+  de: Risiko
+  fr: Risque
+  es: Riesgo
+Holdings Matrix:
+  zh_CN: 持仓矩阵
+  zh_TW: 持倉矩陣
+  ja: 保有銘柄マトリクス
+  ko: 보유 종목 매트릭스
+  de: Positionsmatrix
+  fr: Matrice des positions
+  es: Matriz de posiciones
+Scatter Plot:
+  zh_CN: 散点图
+  zh_TW: 散點圖
+  ja: 散布図
+  ko: 산점도
+  de: Streudiagramm
+  fr: Nuage de points
+  es: Gráfico de dispersión
+Price Chg. % (1D):
+  zh_CN: 价格涨跌幅（1日）
+  zh_TW: 價格漲跌幅（1日）
+  ja: 価格変化率（1日）
+  ko: 가격 변동률 (1일)
+  de: Kursänderung % (1T)
+  fr: Var. de prix % (1 j)
+  es: Var. de precio % (1D)
+Flag:
+  zh_CN: 标记
+  zh_TW: 標記
+  ja: フラグ
+  ko: 플래그
+  de: Markierung
+  fr: Indicateur
+  es: Marcador
+Purchase Date:
+  zh_CN: 买入日期
+  zh_TW: 買入日期
+  ja: 購入日
+  ko: 매수일
+  de: Kaufdatum
+  fr: Date d'achat
+  es: Fecha de compra
+Quantity:
+  zh_CN: 数量
+  zh_TW: 數量
+  ja: 数量
+  ko: 수량
+  de: Menge
+  fr: Quantité
+  es: Cantidad
+Average Cost:
+  zh_CN: 平均成本
+  zh_TW: 平均成本
+  ja: 平均取得単価
+  ko: 평균 단가
+  de: Durchschnittskosten
+  fr: Coût moyen
+  es: Coste medio
+Weight:
+  zh_CN: 权重
+  zh_TW: 權重
+  ja: ウェイト
+  ko: 비중
+  de: Gewichtung
+  fr: Pondération
+  es: Ponderación
+Market Value:
+  zh_CN: 市值
+  zh_TW: 市值
+  ja: 時価評価額
+  ko: 평가금액
+  de: Marktwert
+  fr: Valeur de marché
+  es: Valor de mercado
+P/L (excl. FX):
+  zh_CN: 盈亏（不含汇率）
+  zh_TW: 損益（不含匯率）
+  ja: 損益（為替除く）
+  ko: 손익 (환율 제외)
+  de: G&V (ohne FX)
+  fr: P&L (hors change)
+  es: P/G (sin divisas)
+P/L (from FX):
+  zh_CN: 盈亏（汇率部分）
+  zh_TW: 損益（匯率部分）
+  ja: 損益（為替分）
+  ko: 손익 (환율 요인)
+  de: G&V (aus FX)
+  fr: P&L (change)
+  es: P/G (por divisas)
+P/L (all):
+  zh_CN: 盈亏（全部）
+  zh_TW: 損益（全部）
+  ja: 損益（合計）
+  ko: 손익 (전체)
+  de: G&V (gesamt)
+  fr: P&L (total)
+  es: P/G (total)
+Total Return %:
+  zh_CN: 总回报率
+  zh_TW: 總回報率
+  ja: トータルリターン%
+  ko: 총수익률 %
+  de: Gesamtrendite %
+  fr: Rendement total %
+  es: Rentabilidad total %
+Cash Balance:
+  zh_CN: 现金余额
+  zh_TW: 現金餘額
+  ja: 現金残高
+  ko: 현금 잔액
+  de: Barbestand
+  fr: Solde de trésorerie
+  es: Saldo de efectivo
+Cash Balance Weighting %:
+  zh_CN: 现金余额权重
+  zh_TW: 現金餘額權重
+  ja: 現金残高ウェイト%
+  ko: 현금 잔액 비중 %
+  de: Barbestand-Gewichtung %
+  fr: Pondération de trésorerie %
+  es: Ponderación de efectivo %
+"# Of Holdings":
+  zh_CN: 持仓数量
+  zh_TW: 持倉數量
+  ja: 保有銘柄数
+  ko: 보유 종목 수
+  de: Anzahl Positionen
+  fr: Nombre de positions
+  es: N.º de posiciones
+Dividend Payout (LTM):
+  zh_CN: 股息支付（LTM）
+  zh_TW: 股息支付（LTM）
+  ja: 配当支払額（LTM）
+  ko: 배당 지급 (LTM)
+  de: Dividendenausschüttung (LTM)
+  fr: Dividendes versés (LTM)
+  es: Dividendos pagados (LTM)
+All accounts:
+  zh_CN: 全部账户
+  zh_TW: 全部帳戶
+  ja: すべての口座
+  ko: 모든 계좌
+  de: Alle Konten
+  fr: Tous les comptes
+  es: Todas las cuentas
+Edit Portfolio:
+  zh_CN: 编辑投资组合
+  zh_TW: 編輯投資組合
+  ja: ポートフォリオを編集
+  ko: 포트폴리오 편집
+  de: Portfolio bearbeiten
+  fr: Modifier le portefeuille
+  es: Editar cartera
+Expand Lots:
+  zh_CN: 展开持仓明细
+  zh_TW: 展開持倉明細
+  ja: ロットを展開
+  ko: 매수 단위 펼치기
+  de: Positionen aufklappen
+  fr: Développer les lots
+  es: Expandir lotes
+New:
+  zh_CN: 新建
+  zh_TW: 新增
+  ja: 新規
+  ko: 새로 만들기
+  de: Neu
+  fr: Nouveau
+  es: Nuevo
+US Dollar (USD):
+  zh_CN: 美元（USD）
+  zh_TW: 美元（USD）
+  ja: 米ドル（USD）
+  ko: 미국 달러 (USD)
+  de: US-Dollar (USD)
+  fr: Dollar américain (USD)
+  es: Dólar estadounidense (USD)
+
+# --- Financial Analysis period options (recon 2026-07-11) ---
+
+Fiscal Years:
+  zh_CN: 财年
+  zh_TW: 財年
+  ja: 会計年度
+  ko: 회계연도
+  de: Geschäftsjahre
+  fr: Exercices fiscaux
+  es: Ejercicios fiscales
+Current/LTM:
+  zh_CN: 当前/LTM
+  zh_TW: 當前/LTM
+  ja: 直近/LTM
+  ko: 현재/LTM
+  de: Aktuell/LTM
+  fr: Actuel/LTM
+  es: Actual/LTM
+Last 12 Months (LTM):
+  zh_CN: 最近12个月（LTM）
+  zh_TW: 最近12個月（LTM）
+  ja: 直近12か月（LTM）
+  ko: 최근 12개월 (LTM)
+  de: Letzte 12 Monate (LTM)
+  fr: 12 derniers mois (LTM)
+  es: Últimos 12 meses (LTM)
+Quarterly (Q):
+  zh_CN: 季度（Q）
+  zh_TW: 季度（Q）
+  ja: 四半期（Q）
+  ko: 분기 (Q)
+  de: Quartalsweise (Q)
+  fr: Trimestriel (Q)
+  es: Trimestral (Q)
+Annual (Y):
+  zh_CN: 年度（Y）
+  zh_TW: 年度（Y）
+  ja: 年次（Y）
+  ko: 연간 (Y)
+  de: Jährlich (Y)
+  fr: Annuel (Y)
+  es: Anual (Y)
