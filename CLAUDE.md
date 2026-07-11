@@ -78,9 +78,11 @@ src/content.js                   (translates within scopes; settings in chrome.s
   (e.g. walkthrough next/prev) get clobbered by stale translations.
 - **Pre-paint translation**: MutationObserver callbacks are microtasks (run
   before the next paint). Small batches are translated synchronously there
-  (SYNC_BUDGET_MS) so no English flash is visible; overflow goes to
-  requestIdleCallback slices (SLICE_BUDGET_MS). Don't move the fast path back
-  to idle-only — that causes a visible flash on every SPA update.
+  (SYNC_BUDGET_MS) so no English flash is visible; overflow drains through
+  scheduler.postTask (user-visible) slices (SLICE_BUDGET_MS). Don't move the
+  fast path back to idle-only, and don't switch the backlog to
+  requestIdleCallback — during page load there is no idle time, so large
+  initial renders sat for seconds before translating.
 - **No-op write guards** (`if (value !== next)`) prevent observer feedback loops.
 - **Static/dynamic path ownership**: dynamic (machine) translation records carry
   a `lang` field; static records don't. The dictionary pass MUST skip nodes
@@ -132,6 +134,10 @@ src/content.js                   (translates within scopes; settings in chrome.s
   large financial-metric column namespace ("Total Revenues, CAGR (5Y TTM)") are
   known, deliberate dictionary gaps — pattern matching / a dedicated metrics
   dictionary are future work, not bugs to patch ad hoc.
-- Initial page load can flash English (content script runs at `document_idle`);
-  accepted trade-off — do not "fix" by injecting at `document_start` with
-  render-blocking.
+- The content script runs at `document_start` and arms the MutationObserver as
+  soon as `<body>` exists (via a documentElement observer, NOT DOMContentLoaded
+  — the React app can mount before it fires). Since Koyfin's initial HTML is
+  nearly empty and the UI is React-rendered, this lets the first render be
+  translated pre-paint like any SPA update. Never "fix" residual first-paint
+  flashes by hiding/blocking the page while translating.
+- DO NOT AUTOMATE COMMIT AND/OR PUSH

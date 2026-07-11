@@ -27,7 +27,7 @@
     {
       "matches": ["https://app.koyfin.com/*", "https://www.koyfin.com/*", "https://koyfin.com/*"],
       "js": ["src/content.js"],
-      "run_at": "document_idle"
+      "run_at": "document_start"
     }
   ],
   "web_accessible_resources": [

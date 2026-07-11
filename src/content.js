@@ -16,9 +16,9 @@
  * - DOM changes from the SPA are handled by a MutationObserver. Small
  *   batches are translated synchronously inside the observer callback — a
  *   microtask that runs BEFORE the next paint, so users never see an
- *   untranslated flash. Only oversized batches (bulk re-renders, mostly
- *   non-whitelisted data regions) spill over to requestIdleCallback
- *   slices, keeping the frame budget safe.
+ *   untranslated flash. Oversized batches (bulk renders) spill over to
+ *   scheduler.postTask slices that yield to rendering between slices but
+ *   run promptly, keeping the frame budget safe without idle-waiting.
  * - Original strings are kept in WeakMaps so translations can be reverted
  *   (disable / language switch) without leaking memory on removed nodes.
  */
@@ -59,7 +59,11 @@
   // Bounds for machine-translated strings (dictionary handles the rest).
   const DYN_MIN_LEN = 4;
   const DYN_MAX_LEN = 3000;
-  const DYN_BATCH_SIZE = 50;
+  // Chunk sizes trade throughput vs. progressiveness: Google favors large
+  // batches (fewer HTTP round-trips); the built-in engine streams results
+  // per chunk, so smaller chunks put translated text on screen sooner.
+  const DYN_CHUNK_GOOGLE = 50;
+  const DYN_CHUNK_BUILTIN = 16;
 
   // Elements whose entire subtree must never be touched. SVG (charts) is
   // excluded via its namespace, and user-editable content via
@@ -73,8 +77,8 @@
   // Translatable element attributes.
   const ATTRS = ["placeholder", "title", "aria-label"];
 
-  // Max milliseconds of translation work per idle slice.
-  const SLICE_BUDGET_MS = 8;
+  // Max milliseconds of translation work per backlog slice.
+  const SLICE_BUDGET_MS = 10;
   // Max milliseconds of synchronous (pre-paint) translation per mutation
   // batch; anything beyond spills to the idle queue.
   const SYNC_BUDGET_MS = 6;
@@ -106,10 +110,15 @@
   let scheduled = false;
   let observer = null;
 
-  const scheduleIdle =
-    typeof requestIdleCallback === "function"
-      ? (cb) => requestIdleCallback(cb, { timeout: 1000 })
-      : (cb) => setTimeout(() => cb({ timeRemaining: () => SLICE_BUDGET_MS }), 50);
+  // Backlog scheduler. requestIdleCallback is deliberately NOT used: during
+  // page load there is no idle time, so backlog batches would sit until its
+  // timeout — seconds of visible English on content-heavy pages. postTask
+  // (user-visible) yields to rendering/input between slices but runs
+  // promptly, draining a large backlog in a few hundred ms without jank.
+  const scheduleSlice =
+    typeof scheduler !== "undefined" && typeof scheduler.postTask === "function"
+      ? (cb) => scheduler.postTask(cb, { priority: "user-visible" })
+      : (cb) => setTimeout(cb, 0);
 
   async function loadJson(path) {
     const res = await fetch(chrome.runtime.getURL(path));
@@ -319,9 +328,9 @@
 
   async function builtinTranslate(texts) {
     const translator = await getBuiltinTranslator();
-    const out = [];
-    for (const text of texts) out.push(await translator.translate(text));
-    return out;
+    // Submit the whole chunk at once: the implementation queues internally,
+    // and this avoids a JS round-trip of dead time between items.
+    return Promise.all(texts.map((text) => translator.translate(text)));
   }
 
   function googleTranslate(texts) {
@@ -392,26 +401,50 @@
     while ((node = walker.nextNode())) considerDynamicText(node, out);
   }
 
+  /** True when the node's element is at least partially in the viewport. */
+  function inViewport(node) {
+    const el = node.parentElement;
+    if (!el) return false;
+    const rect = el.getBoundingClientRect();
+    return rect.bottom > 0 && rect.top < window.innerHeight;
+  }
+
+  function applyFromCache(items) {
+    for (const { node, original, trimmed } of items) {
+      // Apply only if the node still shows what we sampled — anything
+      // else means the app re-rendered while we were waiting.
+      if (!node.isConnected || node.nodeValue !== original) continue;
+      const translated = dynCache.get(trimmed);
+      if (translated !== undefined) applyDynamic(node, original, trimmed, translated);
+    }
+  }
+
   async function translateDynamicBatch(items) {
     const requestLang = lang;
     for (const { node } of items) dynInFlight.add(node);
     try {
-      const texts = [...new Set(items.map((i) => i.trimmed))];
-      for (let i = 0; i < texts.length; i += DYN_BATCH_SIZE) {
-        const chunk = texts.slice(i, i + DYN_BATCH_SIZE);
+      // Viewport-first: what the user can see gets translated first.
+      // All rect reads happen together (one layout pass, no interleaved
+      // writes), so this does not thrash layout.
+      const visible = [];
+      const offscreen = [];
+      for (const item of items) (inViewport(item.node) ? visible : offscreen).push(item);
+      const ordered = visible.concat(offscreen);
+
+      const texts = [...new Set(ordered.map((i) => i.trimmed))];
+      const chunkSize = engine === "google" ? DYN_CHUNK_GOOGLE : DYN_CHUNK_BUILTIN;
+      for (let i = 0; i < texts.length; i += chunkSize) {
+        const chunk = texts.slice(i, i + chunkSize);
         const translations =
           engine === "google"
             ? await googleTranslate(chunk)
             : await builtinTranslate(chunk);
         if (lang !== requestLang) return; // language switched mid-flight
         chunk.forEach((t, j) => dynCache.set(t, translations[j]));
-      }
-      for (const { node, original, trimmed } of items) {
-        // Apply only if the node still shows what we sampled — anything
-        // else means the app re-rendered while we were waiting.
-        if (!node.isConnected || node.nodeValue !== original) continue;
-        const translated = dynCache.get(trimmed);
-        if (translated !== undefined) applyDynamic(node, original, trimmed, translated);
+        // Progressive rendering: put each finished chunk on screen
+        // immediately instead of waiting for the whole batch. Already
+        // translated items are skipped by the nodeValue check.
+        applyFromCache(ordered);
       }
     } catch (err) {
       // Circuit-break: without this, every subsequent DOM mutation would
@@ -452,16 +485,15 @@
     }
   }
 
-  function drainPending(deadline) {
+  function drainPending() {
     const start = performance.now();
     for (const node of pending) {
       pending.delete(node);
       if (node.isConnected) handleNode(node);
-      const budgetUsed = performance.now() - start > SLICE_BUDGET_MS;
-      if (budgetUsed && deadline.timeRemaining() <= 0) break;
+      if (performance.now() - start > SLICE_BUDGET_MS) break;
     }
     if (pending.size > 0) {
-      scheduleIdle(drainPending);
+      scheduleSlice(drainPending);
     } else {
       scheduled = false;
     }
@@ -471,7 +503,7 @@
     pending.add(node);
     if (!scheduled) {
       scheduled = true;
-      scheduleIdle(drainPending);
+      scheduleSlice(drainPending);
     }
   }
 
@@ -569,6 +601,12 @@
     if (hasApplied) revertAll();
     hasApplied = true;
     dynamicBroken = false; // settings changed: give the engine another try
+    // Pre-warm the on-device model so the first batch of dynamic content
+    // doesn't pay the create() latency. Failures are ignored here — the
+    // first real batch will surface them and trip the circuit breaker.
+    if (dynamicEnabled && dynamicSel && engine === "builtin") {
+      getBuiltinTranslator().catch(() => {});
+    }
     handleNode(document.body);
     startObserver();
   }
@@ -622,10 +660,19 @@
     lang = items.lang;
     dynamicEnabled = items.dynamicEnabled;
     engine = items.engine;
+    // Injected at document_start: <body> may not exist yet. Start as soon
+    // as it appears (NOT DOMContentLoaded — Koyfin's React app can mount
+    // before that fires) so the observer is armed before the app's first
+    // render and the initial paint is translated pre-paint too.
     if (document.body) {
       apply();
     } else {
-      document.addEventListener("DOMContentLoaded", apply, { once: true });
+      const bodyWatcher = new MutationObserver(() => {
+        if (!document.body) return;
+        bodyWatcher.disconnect();
+        apply();
+      });
+      bodyWatcher.observe(document.documentElement, { childList: true });
     }
   });
 })();
