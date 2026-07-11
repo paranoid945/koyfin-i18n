@@ -12,12 +12,12 @@
     </header>
 
     <label class="row toggle">
-      <span>Enable translation</span>
+      <span data-i18n="enableTranslation">Enable translation</span>
       <input type="checkbox" id="enabled" />
     </label>
 
     <label class="row">
-      <span>Language</span>
+      <span data-i18n="language">Language</span>
       <select id="lang">
         <option value="zh_CN">简体中文</option>
         <option value="zh_TW">繁體中文</option>
@@ -32,47 +32,45 @@
     <hr />
 
     <label class="row toggle">
-      <span>Translate dynamic content<br /><small>market news, descriptions, …</small></span>
+      <span><span data-i18n="dynamicToggle">Translate dynamic content</span><br /><small data-i18n="dynamicHint">market news, descriptions, …</small></span>
       <input type="checkbox" id="dynamic" />
     </label>
 
     <div id="dynamic-options" hidden>
       <label class="row">
-        <span>Engine</span>
+        <span data-i18n="engine">Engine</span>
         <select id="engine">
-          <option value="builtin">Chrome built-in (on-device)</option>
-          <option value="google">Google Cloud Translation</option>
+          <option value="builtin" data-i18n="engineBuiltin">Chrome built-in (on-device)</option>
+          <option value="google" data-i18n="engineGoogle">Google Cloud Translation</option>
         </select>
       </label>
 
       <label class="row" id="key-row" hidden>
-        <span>API key</span>
+        <span data-i18n="apiKey">API key</span>
         <input type="password" id="apikey" placeholder="Google API key" autocomplete="off" />
-        <button id="save-key">Save</button>
+        <button id="save-key" data-i18n="save">Save</button>
       </label>
       <p class="note status" id="key-status" hidden></p>
       <p class="note" id="key-help" hidden>
-        Get a free key in the
-        <a href="https://console.cloud.google.com/apis/credentials" target="_blank" rel="noreferrer">Google Cloud Console</a>:
-        create a project, enable the <em>Cloud Translation API</em>, then
-        Credentials → Create API key. Free tier: 500,000 characters/month.
+        <span data-i18n="keyHelpBefore">Get a free key in the</span>
+        <a href="https://console.cloud.google.com/apis/credentials" target="_blank" rel="noreferrer" data-i18n="keyHelpLink">Google Cloud Console</a><span data-i18n="keyHelpAfter">: create a project, enable the Cloud Translation API, then Credentials → Create API key. Free tier: 500,000 characters/month.</span>
       </p>
 
       <p class="note" id="engine-note"></p>
 
       <div class="row" id="builtin-status-row" hidden>
         <span class="status" id="builtin-status"></span>
-        <button id="download-pack" hidden>Enable</button>
+        <button id="download-pack" data-i18n="enable" hidden>Enable</button>
       </div>
     </div>
 
-    <p class="note">
+    <p class="note" data-i18n="staticNote">
       Static interface labels are translated with a fully offline
       dictionary. Changes apply immediately on open Koyfin tabs.
     </p>
 
     <footer>
-      <a href="https://github.com/paranoid945/koyfin-i18n" target="_blank" rel="noreferrer">Open source on GitHub</a>
+      <a href="https://github.com/paranoid945/koyfin-i18n" target="_blank" rel="noreferrer" data-i18n="openSource">Open source on GitHub</a>
     </footer>
 
     <script src="popup.js"></script>

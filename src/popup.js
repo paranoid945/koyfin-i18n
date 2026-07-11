@@ -1,15 +1,15 @@
-/** Popup: reads and writes the shared settings in chrome.storage.sync. */
+/**
+ * Popup: reads and writes the shared settings in chrome.storage.sync.
+ *
+ * The popup UI itself is localized to the language the user selected for
+ * page translation (src/popup-locales.json, English fallback). Chrome's
+ * _locales mechanism is deliberately not used: it follows the browser UI
+ * language and cannot switch at runtime.
+ */
 
 "use strict";
 
 const DEFAULTS = { enabled: false, lang: "zh_CN", dynamicEnabled: false, engine: "builtin" };
-
-const NOTES = {
-  builtin:
-    "Uses Chrome's on-device translation (Chrome 138+). Free and private — nothing leaves your browser. The language pack downloads on first use.",
-  google:
-    "Sends visible dynamic text to the Google Cloud Translation API using your own key (500k characters/month free tier). The key is stored locally and never synced.",
-};
 
 // Built-in Translator target candidates per UI language (BCP-47),
 // tried in order. Keep in sync with src/content.js.
@@ -37,6 +37,43 @@ const engineNote = document.getElementById("engine-note");
 const statusRow = document.getElementById("builtin-status-row");
 const statusEl = document.getElementById("builtin-status");
 const downloadBtn = document.getElementById("download-pack");
+
+// ---- Popup localization ------------------------------------------------
+
+/** All popup strings, keyed by language; loaded once at startup. */
+let STRINGS = { en: {} };
+let uiLang = DEFAULTS.lang;
+
+/** Translate a popup string key, with optional {placeholder} params. */
+function t(key, params) {
+  let s = STRINGS[uiLang]?.[key] ?? STRINGS.en[key] ?? key;
+  for (const [name, value] of Object.entries(params ?? {})) {
+    s = s.replaceAll(`{${name}}`, String(value));
+  }
+  return s;
+}
+
+/** Re-render every data-i18n annotated element for the current language. */
+function applyI18n() {
+  for (const el of document.querySelectorAll("[data-i18n]")) {
+    el.textContent = t(el.dataset.i18n);
+  }
+}
+
+// ---- Status helpers ----------------------------------------------------
+
+function setStatus(text, kind) {
+  statusEl.textContent = text;
+  statusEl.className = `status${kind ? ` status--${kind}` : ""}`;
+}
+
+function setKeyStatus(text, kind) {
+  keyStatus.hidden = !text;
+  keyStatus.textContent = text;
+  keyStatus.className = `note status${kind ? ` status--${kind}` : ""}`;
+}
+
+// ---- Built-in engine status ---------------------------------------------
 
 /** Target language chosen for a pending pack download. */
 let downloadTarget = null;
@@ -70,16 +107,16 @@ async function refreshBuiltinStatus() {
   downloadBtn.hidden = true;
   downloadTarget = null;
   if (typeof Translator === "undefined") {
-    setStatus("Built-in translator unavailable — requires Chrome 138+.", "err");
+    setStatus(t("statusNoApi"), "err");
     return;
   }
-  setStatus("Checking language pack…", "");
+  setStatus(t("statusChecking"), "");
   const { lang } = await chrome.storage.sync.get({ lang: DEFAULTS.lang });
 
   // Ground truth first: is the translator actually running on the page?
   const page = await queryPageStatus(lang);
   if (page?.active) {
-    setStatus("Translator active on this page ✓", "ok");
+    setStatus(t("statusActive"), "ok");
     return;
   }
   const results = [];
@@ -98,23 +135,18 @@ async function refreshBuiltinStatus() {
   // Diagnostic detail: exactly what the API said per language tag.
   const detail = results.map((r) => `${r.target}: ${r.availability}`).join(", ");
   if (ready) {
-    setStatus("Language pack ready ✓", "ok");
+    setStatus(t("statusReady"), "ok");
   } else if (downloading) {
-    setStatus(`Language pack downloading… (${detail})`, "warn");
+    setStatus(`${t("statusDownloading")} (${detail})`, "warn");
   } else if (downloadable) {
     // "downloadable" may just mean "installed but never used by this
     // extension" — clicking Enable is instant in that case.
     downloadTarget = downloadable.target;
-    setStatus("Not initialized — click Enable (instant if already installed).", "warn");
+    setStatus(t("statusNotInit"), "warn");
     downloadBtn.hidden = false;
   } else {
-    setStatus(`Language not supported by the built-in translator (${detail})`, "err");
+    setStatus(`${t("statusUnsupported")} (${detail})`, "err");
   }
-}
-
-function setStatus(text, kind) {
-  statusEl.textContent = text;
-  statusEl.className = `status${kind ? ` status--${kind}` : ""}`;
 }
 
 downloadBtn.addEventListener("click", async () => {
@@ -126,24 +158,20 @@ downloadBtn.addEventListener("click", async () => {
       targetLanguage: downloadTarget,
       monitor(m) {
         m.addEventListener("downloadprogress", (e) => {
-          setStatus(`Downloading language pack… ${Math.round(e.loaded * 100)}%`, "warn");
+          setStatus(t("statusDlProgress", { pct: Math.round(e.loaded * 100) }), "warn");
         });
       },
     });
-    setStatus("Language pack ready ✓", "ok");
+    setStatus(t("statusReady"), "ok");
     // Nudge content scripts to retry (resets their engine circuit breaker).
     chrome.storage.sync.set({ engineNonce: Date.now() });
   } catch (err) {
-    setStatus(`Download failed: ${err.message ?? err}`, "err");
+    setStatus(t("statusDlFailed", { err: err.message ?? err }), "err");
     downloadBtn.hidden = false;
   }
 });
 
-function setKeyStatus(text, kind) {
-  keyStatus.hidden = !text;
-  keyStatus.textContent = text;
-  keyStatus.className = `note status${kind ? ` status--${kind}` : ""}`;
-}
+// ---- Dynamic-translation section ----------------------------------------
 
 function refreshDynamicUi() {
   const isGoogle = engineSelect.value === "google";
@@ -151,7 +179,7 @@ function refreshDynamicUi() {
   keyRow.hidden = !isGoogle;
   keyHelp.hidden = !isGoogle;
   if (!isGoogle) setKeyStatus("", "");
-  engineNote.textContent = NOTES[engineSelect.value] ?? "";
+  engineNote.textContent = t(isGoogle ? "noteGoogle" : "noteBuiltin");
   refreshBuiltinStatus();
 }
 
@@ -159,35 +187,25 @@ saveKeyBtn.addEventListener("click", async () => {
   const key = keyInput.value.trim();
   await chrome.storage.local.set({ googleApiKey: key });
   if (!key) {
-    setKeyStatus("Key cleared.", "");
+    setKeyStatus(t("keyCleared"), "");
     return;
   }
   // Verify the key end-to-end with a one-word translation.
-  setKeyStatus("Verifying key…", "");
+  setKeyStatus(t("keyVerifying"), "");
   chrome.runtime.sendMessage(
     { type: "translateBatch", texts: ["hello"], target: "zh-CN" },
     (resp) => {
       if (chrome.runtime.lastError || !resp || resp.error) {
         const reason = resp?.error ?? chrome.runtime.lastError?.message ?? "no response";
-        setKeyStatus(`Saved, but the key failed verification (${reason}).`, "err");
+        setKeyStatus(t("keyFailed", { err: reason }), "err");
       } else {
-        setKeyStatus("Key verified and saved ✓", "ok");
+        setKeyStatus(t("keyVerified"), "ok");
       }
     }
   );
 });
 
-chrome.storage.sync.get(DEFAULTS, (items) => {
-  enabledInput.checked = items.enabled;
-  langSelect.value = items.lang;
-  dynamicInput.checked = items.dynamicEnabled;
-  engineSelect.value = items.engine;
-  refreshDynamicUi();
-});
-
-chrome.storage.local.get({ googleApiKey: "" }, (items) => {
-  keyInput.value = items.googleApiKey;
-});
+// ---- Settings wiring -----------------------------------------------------
 
 enabledInput.addEventListener("change", () => {
   chrome.storage.sync.set({ enabled: enabledInput.checked });
@@ -195,6 +213,8 @@ enabledInput.addEventListener("change", () => {
 
 langSelect.addEventListener("change", () => {
   chrome.storage.sync.set({ lang: langSelect.value });
+  uiLang = langSelect.value;
+  applyI18n();
   refreshDynamicUi();
 });
 
@@ -208,3 +228,18 @@ engineSelect.addEventListener("change", () => {
   refreshDynamicUi();
 });
 
+// ---- Init ----------------------------------------------------------------
+
+(async () => {
+  STRINGS = await (await fetch("popup-locales.json")).json();
+  const items = await chrome.storage.sync.get(DEFAULTS);
+  enabledInput.checked = items.enabled;
+  langSelect.value = items.lang;
+  dynamicInput.checked = items.dynamicEnabled;
+  engineSelect.value = items.engine;
+  uiLang = items.lang;
+  applyI18n();
+  refreshDynamicUi();
+  const { googleApiKey } = await chrome.storage.local.get({ googleApiKey: "" });
+  keyInput.value = googleApiKey;
+})();
