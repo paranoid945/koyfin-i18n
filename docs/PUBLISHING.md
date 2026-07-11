@@ -68,10 +68,47 @@ be emailed on approval or rejection.
 
 ## Releasing an update
 
+Manual path:
+
 1. Bump `"version"` in `manifest.json` (and `package.json`).
 2. `npm run package`
 3. In the dashboard, open the item → **Package** → **Upload new package**,
    then submit for review again. Users receive the update automatically.
+
+## Automated releases (GitHub Actions)
+
+`.github/workflows/release.yml` uploads and publishes automatically when a
+version tag is pushed. It can only **update** an existing listing — the
+first submission above must be manual. One-time setup after the first
+publish:
+
+1. **Extension ID**: copy it from the dashboard item URL (32 lowercase
+   letters). Save as repository secret `CWS_EXTENSION_ID`.
+2. **OAuth credentials** (the Web Store API has no API keys):
+   - In [Google Cloud Console](https://console.cloud.google.com), create
+     (or reuse) a project and enable the **Chrome Web Store API**.
+   - Configure the OAuth consent screen (External, add yourself as a test
+     user — it does not need verification for personal use).
+   - Credentials → Create credentials → **OAuth client ID** → type
+     *Desktop app*. Save client ID and secret as secrets `CWS_CLIENT_ID`
+     and `CWS_CLIENT_SECRET`.
+   - Generate a refresh token once, locally:
+     `npx chrome-webstore-upload-keys` (interactive; opens a browser and
+     prints the refresh token). Save it as secret `CWS_REFRESH_TOKEN`.
+3. Release flow:
+
+   ```sh
+   # bump "version" in manifest.json and package.json, commit, then:
+   git tag v0.2.0
+   git push origin main --tags
+   ```
+
+   The workflow verifies the tag matches `manifest.json`, builds the zip,
+   uploads it, submits for review (auto-publish on approval), and attaches
+   the zip to a GitHub release.
+
+Note: the refresh token is tied to your Google account and the consent
+screen's test-user grant; if uploads start failing with 401, regenerate it.
 
 ## Review-friendliness notes
 

@@ -1,0 +1,59 @@
+# Publishes the extension to the Chrome Web Store when a version tag is
+# pushed (e.g. `git tag v0.2.0 && git push --tags`).
+#
+# Requires repository secrets (see docs/PUBLISHING.md, "Automated releases"):
+#   CWS_EXTENSION_ID, CWS_CLIENT_ID, CWS_CLIENT_SECRET, CWS_REFRESH_TOKEN
+# The FIRST store submission must be done manually in the Developer
+# Dashboard — this workflow only updates an existing listing.
+
+name: Release to Chrome Web Store
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write # attach the zip to the GitHub release
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install build tooling
+        run: npm ci
+
+      - name: Check tag matches manifest version
+        run: |
+          MANIFEST_VERSION=$(node -p "require('./manifest.json').version")
+          TAG_VERSION="${GITHUB_REF_NAME#v}"
+          if [ "$MANIFEST_VERSION" != "$TAG_VERSION" ]; then
+            echo "Tag v$TAG_VERSION does not match manifest.json version $MANIFEST_VERSION" >&2
+            exit 1
+          fi
+
+      - name: Build store package
+        run: npm run package
+
+      - name: Upload and publish to the Chrome Web Store
+        env:
+          EXTENSION_ID: ${{ secrets.CWS_EXTENSION_ID }}
+          CLIENT_ID: ${{ secrets.CWS_CLIENT_ID }}
+          CLIENT_SECRET: ${{ secrets.CWS_CLIENT_SECRET }}
+          REFRESH_TOKEN: ${{ secrets.CWS_REFRESH_TOKEN }}
+        run: |
+          npx --yes chrome-webstore-upload-cli@3 upload \
+            --source "dist/koyfin-i18n-${GITHUB_REF_NAME#v}.zip" \
+            --auto-publish
+
+      - name: Attach package to GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/koyfin-i18n-*.zip
+          generate_release_notes: true
