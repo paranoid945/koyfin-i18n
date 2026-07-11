@@ -29,6 +29,11 @@
       </select>
     </label>
 
+    <p class="note" data-i18n="staticNote">
+      Static interface labels are translated with a fully offline
+      dictionary. Changes apply immediately on open Koyfin tabs.
+    </p>
+
     <hr />
 
     <label class="row toggle">
@@ -45,6 +50,8 @@
         </select>
       </label>
 
+      <p class="note" id="engine-note"></p>
+
       <label class="row" id="key-row" hidden>
         <span data-i18n="apiKey">API key</span>
         <input type="password" id="apikey" placeholder="Google API key" autocomplete="off" />
@@ -55,19 +62,18 @@
         <span data-i18n="keyHelpBefore">Get a free key in the</span>
         <a href="https://console.cloud.google.com/apis/credentials" target="_blank" rel="noreferrer" data-i18n="keyHelpLink">Google Cloud Console</a><span data-i18n="keyHelpAfter">: create a project, enable the Cloud Translation API, then Credentials → Create API key. Free tier: 500,000 characters/month.</span>
       </p>
-
-      <p class="note" id="engine-note"></p>
+      <p class="note" id="key-usage" hidden data-i18n="keyUsage">
+        Typical usage: browsing news costs a few thousand characters per
+        page; one earnings-call transcript is ~40,000. Beyond the free tier
+        Google charges ~$20 per million characters — set a budget alert
+        (e.g. $1) in Google Cloud Billing to avoid surprises.
+      </p>
 
       <div class="row" id="builtin-status-row" hidden>
         <span class="status" id="builtin-status"></span>
         <button id="download-pack" data-i18n="enable" hidden>Enable</button>
       </div>
     </div>
-
-    <p class="note" data-i18n="staticNote">
-      Static interface labels are translated with a fully offline
-      dictionary. Changes apply immediately on open Koyfin tabs.
-    </p>
 
     <footer>
       <a href="https://github.com/paranoid945/koyfin-i18n" target="_blank" rel="noreferrer" data-i18n="openSource">Open source on GitHub</a>

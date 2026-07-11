@@ -70,6 +70,8 @@ snapshot description page, 2026-07-11):
 | --- | --- | --- |
 | `[class*='koy-news-item']` | News headlines (news page, panels) | "Google, Amazon Increase Data-Center Capacity Plans" |
 | `[class*='cell-content-text-block']` | Company description text blocks | "Meta Platforms, Inc. engages in the development…" |
+| `[class*='slate-article-reader']` | Transcript/article reader paragraphs (read-only Slate; the editable Slate variant is excluded by the contentEditable guard) | "Ladies and gentlemen, thank you for joining us…" |
+| `[class*='sidebar-news-widget__newsTitle']` | Per-security news sidebar titles (deliberately narrow: excludes source names and timestamps in the same widget) | "Tesla Faces Possible Robotaxi Ban…" |
 
 Additions follow the same rules as the whitelist: `[class*=...]` prefix
 selectors only, derived from recon reports, and recorded here.

@@ -31,6 +31,7 @@ const engineSelect = document.getElementById("engine");
 const keyRow = document.getElementById("key-row");
 const keyInput = document.getElementById("apikey");
 const keyHelp = document.getElementById("key-help");
+const keyUsage = document.getElementById("key-usage");
 const keyStatus = document.getElementById("key-status");
 const saveKeyBtn = document.getElementById("save-key");
 const engineNote = document.getElementById("engine-note");
@@ -178,6 +179,7 @@ function refreshDynamicUi() {
   dynamicOptions.hidden = !dynamicInput.checked;
   keyRow.hidden = !isGoogle;
   keyHelp.hidden = !isGoogle;
+  keyUsage.hidden = !isGoogle;
   if (!isGoogle) setKeyStatus("", "");
   engineNote.textContent = t(isGoogle ? "noteGoogle" : "noteBuiltin");
   refreshBuiltinStatus();

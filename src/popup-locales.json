@@ -29,7 +29,8 @@
     "keyVerifying": "Verifying key…",
     "keyVerified": "Key verified and saved ✓",
     "keyFailed": "Saved, but the key failed verification ({err}).",
-    "keyCleared": "Key cleared."
+    "keyCleared": "Key cleared.",
+    "keyUsage": "Typical usage: browsing news costs a few thousand characters per page; one earnings-call transcript is ~40,000. Beyond the free tier Google charges ~$20 per million characters — set a budget alert (e.g. $1) in Google Cloud Billing to avoid surprises."
   },
   "zh_CN": {
     "enableTranslation": "启用翻译",
@@ -61,7 +62,8 @@
     "keyVerifying": "正在验证密钥…",
     "keyVerified": "密钥验证通过并已保存 ✓",
     "keyFailed": "已保存，但密钥验证失败（{err}）。",
-    "keyCleared": "已清除密钥。"
+    "keyCleared": "已清除密钥。",
+    "keyUsage": "用量参考：浏览新闻每页约消耗几千字符，一篇电话会议记录约 4 万字符。超出每月 50 万免费额度后按约 $20/百万字符计费——建议在 Google Cloud 结算中设置预算提醒（如 $1），避免意外扣费。"
   },
   "zh_TW": {
     "enableTranslation": "啟用翻譯",
@@ -93,7 +95,8 @@
     "keyVerifying": "正在驗證金鑰…",
     "keyVerified": "金鑰驗證通過並已儲存 ✓",
     "keyFailed": "已儲存，但金鑰驗證失敗（{err}）。",
-    "keyCleared": "已清除金鑰。"
+    "keyCleared": "已清除金鑰。",
+    "keyUsage": "用量參考：瀏覽新聞每頁約消耗幾千字元，一篇電話會議記錄約 4 萬字元。超出每月 50 萬免費額度後按約 $20/百萬字元計費——建議在 Google Cloud 帳單中設定預算提醒（如 $1），避免意外扣費。"
   },
   "ja": {
     "enableTranslation": "翻訳を有効にする",
@@ -125,7 +128,8 @@
     "keyVerifying": "キーを検証中…",
     "keyVerified": "キーを検証して保存しました ✓",
     "keyFailed": "保存しましたが、キーの検証に失敗しました（{err}）。",
-    "keyCleared": "キーを削除しました。"
+    "keyCleared": "キーを削除しました。",
+    "keyUsage": "使用量の目安：ニュース閲覧は1ページ数千文字、決算説明会の記録1本で約4万文字です。月50万文字の無料枠を超えると約$20/100万文字が課金されます。予期しない請求を避けるため、Google Cloud の請求設定で予算アラート（例：$1）の設定をおすすめします。"
   },
   "ko": {
     "enableTranslation": "번역 사용",
@@ -157,7 +161,8 @@
     "keyVerifying": "키 확인 중…",
     "keyVerified": "키 확인 및 저장 완료 ✓",
     "keyFailed": "저장했지만 키 확인에 실패했습니다({err}).",
-    "keyCleared": "키를 삭제했습니다."
+    "keyCleared": "키를 삭제했습니다.",
+    "keyUsage": "사용량 참고: 뉴스 탐색은 페이지당 수천 자, 실적 발표 기록 1건은 약 4만 자입니다. 월 50만 자 무료 한도를 초과하면 약 $20/100만 자가 청구됩니다. 예기치 않은 요금을 피하려면 Google Cloud 결제에서 예산 알림(예: $1)을 설정하세요."
   },
   "de": {
     "enableTranslation": "Übersetzung aktivieren",
@@ -189,7 +194,8 @@
     "keyVerifying": "Schlüssel wird geprüft…",
     "keyVerified": "Schlüssel geprüft und gespeichert ✓",
     "keyFailed": "Gespeichert, aber die Prüfung des Schlüssels schlug fehl ({err}).",
-    "keyCleared": "Schlüssel gelöscht."
+    "keyCleared": "Schlüssel gelöscht.",
+    "keyUsage": "Typischer Verbrauch: News-Browsing kostet einige Tausend Zeichen pro Seite, ein Earnings-Call-Transkript ca. 40.000. Über das Freikontingent hinaus berechnet Google ca. $20 pro Million Zeichen — richten Sie in der Google-Cloud-Abrechnung eine Budgetwarnung (z. B. $1) ein."
   },
   "fr": {
     "enableTranslation": "Activer la traduction",
@@ -221,7 +227,8 @@
     "keyVerifying": "Vérification de la clé…",
     "keyVerified": "Clé vérifiée et enregistrée ✓",
     "keyFailed": "Enregistrée, mais la vérification de la clé a échoué ({err}).",
-    "keyCleared": "Clé effacée."
+    "keyCleared": "Clé effacée.",
+    "keyUsage": "Consommation typique : quelques milliers de caractères par page de news, environ 40 000 pour une transcription de résultats. Au-delà du niveau gratuit, Google facture env. 20 $ par million de caractères — configurez une alerte budgétaire (p. ex. 1 $) dans la facturation Google Cloud."
   },
   "es": {
     "enableTranslation": "Activar traducción",
@@ -253,6 +260,7 @@
     "keyVerifying": "Verificando la clave…",
     "keyVerified": "Clave verificada y guardada ✓",
     "keyFailed": "Guardada, pero la verificación de la clave falló ({err}).",
-    "keyCleared": "Clave borrada."
+    "keyCleared": "Clave borrada.",
+    "keyUsage": "Uso típico: navegar noticias consume unos miles de caracteres por página; una transcripción de resultados, ~40 000. Superado el nivel gratuito, Google cobra ~$20 por millón de caracteres: configure una alerta de presupuesto (p. ej., $1) en la facturación de Google Cloud."
   }
 }

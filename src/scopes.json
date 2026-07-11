@@ -2,7 +2,9 @@
   "comment": "Translation scope whitelist. 'whitelist' = dictionary-translated UI; 'exclude' = never touched, even inside a scope; 'dynamic' = machine-translated content regions (news, descriptions), only when the user enables dynamic translation. See docs/SCOPES.md for the decision log.",
   "dynamic": [
     "[class*='koy-news-item']",
-    "[class*='cell-content-text-block']"
+    "[class*='cell-content-text-block']",
+    "[class*='slate-article-reader']",
+    "[class*='sidebar-news-widget__newsTitle']"
   ],
   "whitelist": [
     "nav[class*='navi-panel-layout'] a[class*='navi-panel-list-item']",
