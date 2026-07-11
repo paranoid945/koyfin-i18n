@@ -2924,3 +2924,493 @@ Asian Pacific Markets:
   de: Asiatisch-pazifische Märkte
   fr: Marchés Asie-Pacifique
   es: Mercados de Asia-Pacífico
+
+# --- Sector & industry names (static dashboards, recon 2026-07-11) ---
+
+Energy:
+  zh_CN: 能源
+  zh_TW: 能源
+  ja: エネルギー
+  ko: 에너지
+  de: Energie
+  fr: Énergie
+  es: Energía
+Materials:
+  zh_CN: 原材料
+  zh_TW: 原材料
+  ja: 素材
+  ko: 소재
+  de: Grundstoffe
+  fr: Matériaux
+  es: Materiales
+Industrials:
+  zh_CN: 工业
+  zh_TW: 工業
+  ja: 資本財
+  ko: 산업재
+  de: Industrie
+  fr: Industrie
+  es: Industriales
+Cons. Discretionary:
+  zh_CN: 非必需消费品
+  zh_TW: 非必需消費品
+  ja: 一般消費財
+  ko: 임의소비재
+  de: Zykl. Konsumgüter
+  fr: Conso. discrétionnaire
+  es: Consumo discrecional
+Cons. Staples:
+  zh_CN: 必需消费品
+  zh_TW: 必需消費品
+  ja: 生活必需品
+  ko: 필수소비재
+  de: Basiskonsumgüter
+  fr: Conso. de base
+  es: Consumo básico
+Health Care:
+  zh_CN: 医疗保健
+  zh_TW: 醫療保健
+  ja: ヘルスケア
+  ko: 헬스케어
+  de: Gesundheitswesen
+  fr: Santé
+  es: Salud
+# NOTE: "Financials" (the sector) is deliberately absent — the key is taken
+# by the security-page statements tab (zh_CN: 财务数据), which is far more
+# visible; the dictionary is context-free (one translation per string).
+Technology:
+  zh_CN: 科技
+  zh_TW: 科技
+  ja: テクノロジー
+  ko: 기술
+  de: Technologie
+  fr: Technologie
+  es: Tecnología
+Communications:
+  zh_CN: 通信
+  zh_TW: 通信
+  ja: コミュニケーション
+  ko: 커뮤니케이션
+  de: Kommunikation
+  fr: Communications
+  es: Comunicaciones
+Utilities:
+  zh_CN: 公用事业
+  zh_TW: 公用事業
+  ja: 公益事業
+  ko: 유틸리티
+  de: Versorger
+  fr: Services publics
+  es: Servicios públicos
+Real Estate:
+  zh_CN: 房地产
+  zh_TW: 房地產
+  ja: 不動産
+  ko: 부동산
+  de: Immobilien
+  fr: Immobilier
+  es: Inmobiliario
+Oil Services:
+  zh_CN: 油田服务
+  zh_TW: 油田服務
+  ja: 石油サービス
+  ko: 석유 서비스
+  de: Öl-Dienstleistungen
+  fr: Services pétroliers
+  es: Servicios petroleros
+Retail:
+  zh_CN: 零售
+  zh_TW: 零售
+  ja: 小売
+  ko: 소매
+  de: Einzelhandel
+  fr: Distribution
+  es: Comercio minorista
+Homebuilders:
+  zh_CN: 住宅建筑商
+  zh_TW: 住宅建築商
+  ja: 住宅建設
+  ko: 주택 건설
+  de: Hausbauer
+  fr: Constructeurs de maisons
+  es: Constructoras de viviendas
+Water Resources:
+  zh_CN: 水资源
+  zh_TW: 水資源
+  ja: 水資源
+  ko: 수자원
+  de: Wasserressourcen
+  fr: Ressources en eau
+  es: Recursos hídricos
+Agriculture:
+  zh_CN: 农业
+  zh_TW: 農業
+  ja: 農業
+  ko: 농업
+  de: Landwirtschaft
+  fr: Agriculture
+  es: Agricultura
+Russell 1000:
+  zh_CN: 罗素1000
+  zh_TW: 羅素1000
+  ja: ラッセル1000
+  ko: 러셀 1000
+  de: Russell 1000
+  fr: Russell 1000
+  es: Russell 1000
+
+Semiconductors:
+  zh_CN: 半导体
+  zh_TW: 半導體
+  ja: 半導体
+  ko: 반도체
+  de: Halbleiter
+  fr: Semi-conducteurs
+  es: Semiconductores
+Regional Banks:
+  zh_CN: 区域性银行
+  zh_TW: 區域性銀行
+  ja: 地方銀行
+  ko: 지방 은행
+  de: Regionalbanken
+  fr: Banques régionales
+  es: Bancos regionales
+Banks:
+  zh_CN: 银行
+  zh_TW: 銀行
+  ja: 銀行
+  ko: 은행
+  de: Banken
+  fr: Banques
+  es: Bancos
+Biotech:
+  zh_CN: 生物科技
+  zh_TW: 生物科技
+  ja: バイオテック
+  ko: 바이오텍
+  de: Biotech
+  fr: Biotech
+  es: Biotecnología
+Pharma:
+  zh_CN: 制药
+  zh_TW: 製藥
+  ja: 製薬
+  ko: 제약
+  de: Pharma
+  fr: Pharma
+  es: Farma
+Pharmaceuticals:
+  zh_CN: 制药
+  zh_TW: 製藥
+  ja: 製薬
+  ko: 제약
+  de: Pharma
+  fr: Pharmacie
+  es: Farmacéuticas
+Aerospace & Defense:
+  zh_CN: 航空航天与国防
+  zh_TW: 航空航天與國防
+  ja: 航空宇宙・防衛
+  ko: 항공우주·방위
+  de: Luftfahrt & Verteidigung
+  fr: Aérospatiale et défense
+  es: Aeroespacial y defensa
+Transportation:
+  zh_CN: 运输
+  zh_TW: 運輸
+  ja: 運輸
+  ko: 운송
+  de: Transport
+  fr: Transport
+  es: Transporte
+Telecom:
+  zh_CN: 电信
+  zh_TW: 電信
+  ja: 電気通信
+  ko: 통신
+  de: Telekommunikation
+  fr: Télécoms
+  es: Telecomunicaciones
+Media:
+  zh_CN: 媒体
+  zh_TW: 媒體
+  ja: メディア
+  ko: 미디어
+  de: Medien
+  fr: Médias
+  es: Medios
+Insurance:
+  zh_CN: 保险
+  zh_TW: 保險
+  ja: 保険
+  ko: 보험
+  de: Versicherungen
+  fr: Assurance
+  es: Seguros
+Software:
+  zh_CN: 软件
+  zh_TW: 軟體
+  ja: ソフトウェア
+  ko: 소프트웨어
+  de: Software
+  fr: Logiciels
+  es: Software
+Capital Markets:
+  zh_CN: 资本市场
+  zh_TW: 資本市場
+  ja: 資本市場
+  ko: 자본시장
+  de: Kapitalmärkte
+  fr: Marchés de capitaux
+  es: Mercados de capitales
+Metals & Mining:
+  zh_CN: 金属与采矿
+  zh_TW: 金屬與採礦
+  ja: 金属・鉱業
+  ko: 금속·광업
+  de: Metalle & Bergbau
+  fr: Métaux et mines
+  es: Metales y minería
+Gold Miners:
+  zh_CN: 金矿企业
+  zh_TW: 金礦企業
+  ja: 金鉱株
+  ko: 금광 기업
+  de: Goldminen
+  fr: Mines d'or
+  es: Mineras de oro
+REITs:
+  zh_CN: 房地产投资信托
+  zh_TW: 房地產投資信託
+  ja: REIT
+  ko: 리츠
+  de: REITs
+  fr: REIT
+  es: REIT
+Solar:
+  zh_CN: 太阳能
+  zh_TW: 太陽能
+  ja: 太陽光発電
+  ko: 태양광
+  de: Solar
+  fr: Solaire
+  es: Solar
+Internet:
+  zh_CN: 互联网
+  zh_TW: 網際網路
+  ja: インターネット
+  ko: 인터넷
+  de: Internet
+  fr: Internet
+  es: Internet
+MLPs:
+  zh_CN: 业主有限合伙（MLP）
+  zh_TW: 業主有限合夥（MLP）
+  ja: MLP
+  ko: MLP
+  de: MLPs
+  fr: MLP
+  es: MLP
+Oil & Gas E&P:
+  zh_CN: 油气勘探与生产
+  zh_TW: 油氣勘探與生產
+  ja: 石油・ガス探査開発
+  ko: 석유·가스 탐사개발
+  de: Öl- & Gasexploration
+  fr: Exploration-production pétrole et gaz
+  es: Exploración y producción de petróleo y gas
+Airlines:
+  zh_CN: 航空公司
+  zh_TW: 航空公司
+  ja: 航空会社
+  ko: 항공사
+  de: Fluggesellschaften
+  fr: Compagnies aériennes
+  es: Aerolíneas
+Clean Energy:
+  zh_CN: 清洁能源
+  zh_TW: 清潔能源
+  ja: クリーンエネルギー
+  ko: 청정 에너지
+  de: Saubere Energie
+  fr: Énergies propres
+  es: Energía limpia
+
+# --- Commodity names (static dashboards, recon 2026-07-11) ---
+
+Brent Crude Oil:
+  zh_CN: 布伦特原油
+  zh_TW: 布蘭特原油
+  ja: ブレント原油
+  ko: 브렌트유
+  de: Brent-Rohöl
+  fr: Pétrole Brent
+  es: Petróleo Brent
+WTI Crude Oil:
+  zh_CN: WTI原油
+  zh_TW: WTI原油
+  ja: WTI原油
+  ko: WTI유
+  de: WTI-Rohöl
+  fr: Pétrole WTI
+  es: Petróleo WTI
+Natural Gas:
+  zh_CN: 天然气
+  zh_TW: 天然氣
+  ja: 天然ガス
+  ko: 천연가스
+  de: Erdgas
+  fr: Gaz naturel
+  es: Gas natural
+Heating Oil:
+  zh_CN: 取暖油
+  zh_TW: 取暖油
+  ja: ヒーティングオイル
+  ko: 난방유
+  de: Heizöl
+  fr: Fioul domestique
+  es: Gasóleo de calefacción
+Gasoline:
+  zh_CN: 汽油
+  zh_TW: 汽油
+  ja: ガソリン
+  ko: 휘발유
+  de: Benzin
+  fr: Essence
+  es: Gasolina
+Coal:
+  zh_CN: 煤炭
+  zh_TW: 煤炭
+  ja: 石炭
+  ko: 석탄
+  de: Kohle
+  fr: Charbon
+  es: Carbón
+Ethanol:
+  zh_CN: 乙醇
+  zh_TW: 乙醇
+  ja: エタノール
+  ko: 에탄올
+  de: Ethanol
+  fr: Éthanol
+  es: Etanol
+Gold:
+  zh_CN: 黄金
+  zh_TW: 黃金
+  ja: 金
+  ko: 금
+  de: Gold
+  fr: Or
+  es: Oro
+Silver:
+  zh_CN: 白银
+  zh_TW: 白銀
+  ja: 銀
+  ko: 은
+  de: Silber
+  fr: Argent
+  es: Plata
+Copper:
+  zh_CN: 铜
+  zh_TW: 銅
+  ja: 銅
+  ko: 구리
+  de: Kupfer
+  fr: Cuivre
+  es: Cobre
+Aluminum:
+  zh_CN: 铝
+  zh_TW: 鋁
+  ja: アルミニウム
+  ko: 알루미늄
+  de: Aluminium
+  fr: Aluminium
+  es: Aluminio
+Steel:
+  zh_CN: 钢铁
+  zh_TW: 鋼鐵
+  ja: 鉄鋼
+  ko: 철강
+  de: Stahl
+  fr: Acier
+  es: Acero
+Wheat:
+  zh_CN: 小麦
+  zh_TW: 小麥
+  ja: 小麦
+  ko: 밀
+  de: Weizen
+  fr: Blé
+  es: Trigo
+Corn:
+  zh_CN: 玉米
+  zh_TW: 玉米
+  ja: トウモロコシ
+  ko: 옥수수
+  de: Mais
+  fr: Maïs
+  es: Maíz
+Soybeans:
+  zh_CN: 大豆
+  zh_TW: 大豆
+  ja: 大豆
+  ko: 대두
+  de: Sojabohnen
+  fr: Soja
+  es: Soja
+Sugar:
+  zh_CN: 糖
+  zh_TW: 糖
+  ja: 砂糖
+  ko: 설탕
+  de: Zucker
+  fr: Sucre
+  es: Azúcar
+Cotton:
+  zh_CN: 棉花
+  zh_TW: 棉花
+  ja: 綿花
+  ko: 면화
+  de: Baumwolle
+  fr: Coton
+  es: Algodón
+Live Cattle:
+  zh_CN: 活牛
+  zh_TW: 活牛
+  ja: 生牛
+  ko: 생우
+  de: Lebendrind
+  fr: Bovins vivants
+  es: Ganado en pie
+Feeder Cattle:
+  zh_CN: 饲养牛
+  zh_TW: 飼養牛
+  ja: 肥育牛
+  ko: 비육우
+  de: Mastrind
+  fr: Bovins d'engraissement
+  es: Ganado de engorde
+Baltic Dry Index:
+  zh_CN: 波罗的海干散货指数
+  zh_TW: 波羅的海乾散貨指數
+  ja: バルチック海運指数
+  ko: 발틱운임지수
+  de: Baltic-Dry-Index
+  fr: Indice Baltic Dry
+  es: Índice Báltico Seco
+CRB Index:
+  zh_CN: CRB指数
+  zh_TW: CRB指數
+  ja: CRB指数
+  ko: CRB 지수
+  de: CRB-Index
+  fr: Indice CRB
+  es: Índice CRB
+S&P GSCI Index:
+  zh_CN: 标普GSCI指数
+  zh_TW: 標普GSCI指數
+  ja: S&P GSCI指数
+  ko: S&P GSCI 지수
+  de: S&P-GSCI-Index
+  fr: Indice S&P GSCI
+  es: Índice S&P GSCI

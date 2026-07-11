@@ -27,6 +27,8 @@
     "[class*='block-string__label']",
     "[class*='content-sidebar-header']",
     "[class*='menu-input__value']",
+    "[class*='static-dashboard'] [class*='table-cell-last-updated__labelCell']",
+    "[class*='factor-stack-item__label']",
     "[class*='rc-dialog-content']",
     "a[class*='skipLink']"
   ],

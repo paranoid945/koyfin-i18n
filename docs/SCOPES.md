@@ -42,6 +42,8 @@ stable hooks available.
 | `[class*='block-string__label']` | Quote-box metric names | Sector, Forward P/E, Next Earnings Date |
 | `[class*='content-sidebar-header']` | Content sidebar header | My Watchlists |
 | `[class*='menu-input__value']` | Dropdown current values | Daily |
+| `[class*='static-dashboard'] [class*='table-cell-last-updated__labelCell']` | Row names on built-in market dashboards ONLY — the same cell component in watchlists holds company names and must stay out; the `static-dashboard` ancestor restriction is what makes this safe | Materials, Brent Crude Oil |
+| `[class*='factor-stack-item__label']` | Performance-stack bar labels (closed Koyfin vocabulary) | Copper, Wheat |
 | `[class*='rc-dialog-content']` | Modal dialogs | Get Started, Close |
 | `a[class*='skipLink']` | Accessibility skip link | Skip to main content |
 

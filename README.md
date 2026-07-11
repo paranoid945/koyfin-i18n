@@ -95,7 +95,9 @@ table headers, buttons, ...) so that dynamic data — tickers, company and
 fund names, prices — can never be touched. The whitelist is derived from
 real pages:
 
-1. Open an app.koyfin.com page with the extension **disabled**.
+1. Open an app.koyfin.com page with the extension **disabled**. Scroll
+   through virtualized tables/lists first — rows outside the DOM are
+   invisible to the scan.
 2. Paste `tools/scope-recon.js` into the DevTools console (it is
    self-contained — no build step).
 3. It groups every English string on the page by a structural scope
